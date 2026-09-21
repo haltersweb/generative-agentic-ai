@@ -48,6 +48,8 @@
     --focus: #8AA8FF;
   }
 }
+/* The night surfaces stay dark in both themes, so they need the light focus colour in both */
+.screen, dialog { --focus: #8AA8FF; }
 *, *::before, *::after { box-sizing: inherit; }
 html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
 body {
@@ -83,7 +85,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .intro { padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2rem, 5vw, 3.5rem); display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
 .intro h1 {
   font-family: var(--serif); font-weight: 400;
-  font-size: clamp(2.6rem, 6.5vw, 5.25rem); line-height: 1.02; letter-spacing: -0.01em;
+  font-size: clamp(2.6rem, 1.6rem + 4vw, 5.25rem); line-height: 1.02; letter-spacing: -0.01em;
   margin: 0; max-width: 16ch;
 }
 .intro p { margin: 0; max-width: 52ch; color: var(--graphite); font-size: 1.15rem; }
@@ -111,7 +113,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .entry-link:focus-visible { outline: none; }
 .entry-link:focus-visible::after { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 4px; }
 .entry-num { font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--lamp-text); }
-.entry h3 { overflow-wrap: anywhere; font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 3.5vw, 2.6rem); line-height: 1.05; margin: 0 0 .5rem; }
+.entry h3 { overflow-wrap: break-word; hyphens: auto; font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 1.5rem + 1.5vw, 2.6rem); line-height: 1.05; margin: 0 0 .5rem; }
 .entry-row:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .entry p { margin: 0; max-width: 58ch; color: var(--graphite); }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
@@ -139,19 +141,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
                     radial-gradient(circle at 70% 60%, rgba(255,255,255,.4) 0 1px, transparent 1.5px),
                     radial-gradient(circle at 45% 80%, rgba(255,255,255,.3) 0 1px, transparent 1.5px);
   background-size: 180px 180px, 240px 240px, 310px 310px;
-  opacity: .5;
+  /* .3 keeps all hero text at 4.5:1 or better even where it sits on a star dot */
+  opacity: .3;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .screen::before { animation: snow 40s linear infinite; }
-  @keyframes snow { to { background-position: 60px 180px, -40px 240px, 30px 310px; } }
+  .screen::before { animation: snow 5s ease-out 1 forwards; }
+  @keyframes snow { to { background-position: 8px 24px, -6px 30px, 4px 36px; } }
 }
 .screen .wrap { position: relative; }
 .back { display: inline-flex; gap: .4rem; align-items: center; margin-top: 1.5rem; color: var(--snow-dim); text-decoration: none; font-size: .95rem; }
 .back:hover { color: var(--snow); text-decoration: underline; }
 .premiere { padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(2.5rem, 6vw, 4.5rem); max-width: 50rem; }
 .premiere .status-line { color: var(--lamp); font-size: .95rem; margin: 0 0 1rem; }
-.premiere h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(3.5rem, 12vw, 8.5rem); line-height: .92; margin: 0 0 1.25rem; letter-spacing: -0.015em; overflow-wrap: anywhere; }
-.premiere .logline { font-family: var(--serif); font-style: italic; font-size: clamp(1.35rem, 2.6vw, 1.8rem); line-height: 1.3; margin: 0 0 1.25rem; max-width: 34ch; }
+.premiere h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(3.5rem, 2rem + 8vw, 8.5rem); line-height: .92; margin: 0 0 1.25rem; letter-spacing: -0.015em; overflow-wrap: break-word; hyphens: auto; }
+.premiere .logline { font-family: var(--serif); font-style: italic; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem); line-height: 1.3; margin: 0 0 1.25rem; max-width: 34ch; }
 .premiere p { color: var(--snow-dim); max-width: 60ch; margin: 0; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
 .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: .98rem; border: 1px solid transparent; }
@@ -173,14 +176,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .performer-body { padding: 1.25rem 1.25rem 1.4rem; }
 .performer-body h3 { font-family: var(--serif); font-weight: 400; font-size: 1.75rem; margin: 0; line-height: 1.1; }
 .performer-body .desc { color: var(--snow-dim); font-size: .92rem; margin: .5rem 0 1rem; }
-.performer-body blockquote { margin: 0; padding-left: .9rem; border-left: 2px solid var(--lamp); font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.35; }
+.performer-body .pf-label { margin: 0 0 .3rem; font-size: .85rem; color: var(--snow-dim); }
+.performer-body .pf-objective { margin: 0; padding-left: .9rem; border-left: 2px solid var(--lamp); font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.35; }
 .performer-body .voice { font-size: .85rem; color: var(--snow-dim); margin: 1rem 0 0; }
 .lock { display: inline-block; margin-top: .9rem; font-size: .78rem; padding: .15rem .55rem; border-radius: 4px; background: #3A2C12; color: var(--lamp); }
 
 /* Paper sections inside a project */
 .section { padding-block: clamp(3rem, 7vw, 5rem) 0; }
 .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem; border-top: 2px solid var(--rule-strong); padding-top: 1.25rem; margin-bottom: 2rem; }
-.section-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 3.5vw, 2.5rem); line-height: 1.05; margin: 0; }
+.section-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 1.5rem + 1.5vw, 2.5rem); line-height: 1.05; margin: 0; }
 .section-head p { margin: 0; color: var(--graphite); max-width: var(--measure); }
 
 .tests { display: grid; gap: 2.5rem; }
@@ -192,10 +196,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .reading { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
 .switch { display: flex; border-bottom: 1px solid var(--rule); }
 .switch button { flex: 1; background: transparent; border: 0; padding: .9rem 1rem; font-weight: 500; color: var(--graphite); border-bottom: 3px solid transparent; }
-.switch button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--lamp); }
+.switch button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--lamp-text); font-weight: 600; }
 .switch button:hover { color: var(--ink); }
 .panel { padding: 1.25rem 1.4rem 1.5rem; }
 .panel:focus-visible { outline-offset: -3px; }
+.panel .panel-label { margin: 0 0 .3rem; font-size: .85rem; color: var(--graphite); }
 .panel .objective { font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.3; margin: 0 0 1.25rem; }
 .beats { list-style: none; margin: 0; padding: 0; }
 .beats li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--rule); font-size: .97rem; }
@@ -264,6 +269,17 @@ dialog::backdrop { background: rgba(6, 9, 16, .78); }
   .beats li { grid-template-columns: minmax(0, 1fr); gap: .15rem; }
   .masthead nav { gap: 1rem; }
 }
+@media (max-width: 820px), (max-height: 520px) {
+  /* Let the dialog itself scroll; a nested scroller is hard to reach by keyboard at high zoom */
+  .lb-body { max-height: none; overflow: visible; }
+  .lb-img { min-height: 0; }
+}
+@media (forced-colors: active) {
+  .chip[aria-pressed="true"],
+  .switch button[aria-selected="true"] { forced-color-adjust: none; background: Highlight; color: HighlightText; border-color: Highlight; }
+  .switch button { border-bottom-color: Canvas; }
+  .entry-link:focus-visible::after { outline-color: Highlight; }
+}
 @media (prefers-reduced-motion: no-preference) {
   .view-enter { animation: enter .45s ease-out; }
   @keyframes enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -295,6 +311,7 @@ dialog::backdrop { background: rgba(6, 9, 16, .78); }
 </footer>
 
 <dialog id="lightbox" aria-labelledby="lb-title">
+  <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
   <div class="lb">
     <div class="lb-img" id="lb-img"></div>
     <div class="lb-body">
@@ -306,7 +323,6 @@ dialog::backdrop { background: rgba(6, 9, 16, .78); }
       <p id="lb-status"></p>
     </div>
   </div>
-  <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
 </dialog>
 
 <script>
@@ -338,6 +354,7 @@ const PROJECTS = [
         name: "Daniel Reyes",
         initials: "DR",
         image: "video/wonderful/daniel-reyes-headshot-v1.png",
+        alt: "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair greying at the temples, heavy dark brows, and dark brown eyes. He has light stubble and a faint closed-mouth smile, and looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
         desc: "Compact and broad-chested, quick and magnetic. A credit union director who could have been a successful entrepreneur.",
         objective: "Let this man finally acknowledge what I am worth.",
         voice: "Middle-low pitch, forward resonance, quick conversational emphasis.",
@@ -347,6 +364,7 @@ const PROJECTS = [
         name: "Adrian Shaw",
         initials: "AS",
         image: "video/wonderful/adrian-shaw-headshot-v1.png",
+        alt: "Casting headshot of Adrian Shaw, an AI-generated fictional performer. A lean man around 40 with light olive skin, high cheekbones, and a narrow, angular jaw with light stubble. His dark hair is tousled and swept back, with a few grey strands at the temples. He has brown almond-shaped eyes under straight dark brows and a neutral, closed-mouth expression. He wears a heather grey crew-neck sweater against a plain grey backdrop in soft, even light.",
         desc: "Lean, with a long neck and contained restless intelligence. A man who expected to become an architect.",
         objective: "Let this offer reopen the future I thought was gone.",
         voice: "Middle pitch, precise consonants, compressed phrase endings when holding back.",
@@ -441,12 +459,18 @@ const PROJECTS = [
 const main = document.getElementById("main");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const num = i => String(i + 1).padStart(2, "0");
+/* "0–12s" is read as "0 dash 12 s" by some screen readers; give them words */
+const spokenTime = t => {
+  const m = String(t).match(/^(\d+)\s*[–-]\s*(\d+)\s*s$/);
+  return m ? `${m[1]} to ${m[2]} seconds` : t;
+};
+let lastProjectId = null;
 let activeFilter = "All";
 
 /* Images load from the repo when hosted on GitHub Pages, fall back to
    raw.githubusercontent.com when opened locally, then to initials. */
 function photo(p, cls = "") {
-  return `<img class="${cls}" src="${esc(p.image)}" alt="Casting headshot of ${esc(p.name)}, an AI-generated fictional performer" loading="lazy" decoding="async"
+  return `<img class="${cls}" src="${esc(p.image)}" alt="${esc(p.alt || `Casting headshot of ${p.name}, an AI-generated fictional performer`)}" loading="lazy" decoding="async"
     data-raw="${esc(RAW + p.image)}" data-initials="${esc(p.initials)}" onerror="imgFallback(this)">`;
 }
 function imgFallback(img) {
@@ -474,11 +498,11 @@ function renderIndex(focusTarget) {
           <div class="filters" role="group" aria-label="Filter projects by medium">
             ${media.map(m => {
               const n = m === "All" ? PROJECTS.length : PROJECTS.filter(p => p.medium.includes(m)).length;
-              return `<button class="chip" data-filter="${esc(m)}" aria-pressed="${m === activeFilter}">${esc(m)}<span class="count">${n}</span></button>`;
+              return `<button class="chip" data-filter="${esc(m)}" aria-pressed="${m === activeFilter}">${esc(m)}<span class="count"><span class="sr-only">, </span>${n}<span class="sr-only"> ${n === 1 ? "project" : "projects"}</span></span></button>`;
             }).join("")}
           </div>
         </div>
-        ${list.length ? `<ol class="entries">
+        ${list.length ? `<ol class="entries" role="list">
           ${list.map(({ p, i }) => `
             <li class="entry">
               <div class="entry-row">
@@ -529,8 +553,14 @@ function renderIndex(focusTarget) {
     const btn = main.querySelector(`[data-filter="${CSS.escape(activeFilter)}"]`);
     if (btn) btn.focus();
   } else if (focusTarget === "return") {
-    window.scrollTo(0, 0);
-    document.getElementById("intro-title").focus({ preventScroll: true });
+    const from = lastProjectId && main.querySelector(`.entry-link[href="#/project/${CSS.escape(lastProjectId)}"]`);
+    if (from) {
+      from.focus({ preventScroll: true });
+      from.closest(".entry").scrollIntoView({ block: "center" });
+    } else {
+      window.scrollTo(0, 0);
+      document.getElementById("intro-title").focus({ preventScroll: true });
+    }
   } else if (focusTarget === "about") {
     document.getElementById("about").scrollIntoView();
     document.getElementById("about-title").setAttribute("tabindex", "-1");
@@ -540,6 +570,7 @@ function renderIndex(focusTarget) {
 
 /* ------------------------ Project view ------------------------- */
 function renderProject(p) {
+  lastProjectId = p.id;
   const i = PROJECTS.indexOf(p);
   const prev = PROJECTS[i - 1], next = PROJECTS[i + 1];
 
@@ -574,7 +605,8 @@ function renderProject(p) {
                   <div class="performer-body">
                     <h3>${esc(pf.name)}</h3>
                     <p class="desc">${esc(pf.desc)}</p>
-                    <blockquote>${esc(pf.objective)}</blockquote>
+                    <p class="pf-label">Objective</p>
+                    <p class="pf-objective">${esc(pf.objective)}</p>
                     ${pf.voice ? `<p class="voice">Proposed voice: ${esc(pf.voice.charAt(0).toLowerCase() + pf.voice.slice(1))}</p>` : ""}
                     <span class="lock">Unlocked candidate</span>
                   </div>
@@ -606,9 +638,10 @@ function renderProject(p) {
                   </div>
                   ${t.readings.map((r, ri) => `
                     <div class="panel" role="tabpanel" id="panel-${ti}-${ri}" aria-labelledby="tab-${ti}-${ri}" tabindex="0" ${ri === 0 ? "" : "hidden"}>
+                      <p class="panel-label">Objective for ${esc(r.performer)}</p>
                       <p class="objective">${esc(r.objective)}</p>
-                      <ol class="beats">
-                        ${r.beats.map(([time, text]) => `<li><span class="time">${esc(time)}</span><span>${esc(text)}</span></li>`).join("")}
+                      <ol class="beats" role="list">
+                        ${r.beats.map(([time, text]) => `<li><span class="time"><span aria-hidden="true">${esc(time)}</span><span class="sr-only">${esc(spokenTime(time))}</span></span><span>${esc(text)}</span></li>`).join("")}
                       </ol>
                       ${r.watch ? `<p class="watch"><strong>Watch for:</strong> ${esc(r.watch)}</p>` : ""}
                     </div>`).join("")}
@@ -624,7 +657,7 @@ function renderProject(p) {
             <h2 id="progress-title">Progress</h2>
             <p>What's finished, what's underway, and what comes next.</p>
           </div>
-          <ol class="pipeline">
+          <ol class="pipeline" role="list">
             ${p.pipeline.map(s => `
               <li class="${esc(s.state)}">
                 <span class="state"><span class="dot" aria-hidden="true"></span>${s.state === "done" ? "Done" : s.state === "current" ? "In progress" : "Up next"}</span>
@@ -640,7 +673,7 @@ function renderProject(p) {
             <h2 id="files-title">Process files</h2>
             <p>The working documents behind this project, open on GitHub. They're shared for reference; please check the licensing guide before reusing anything.</p>
           </div>
-          <ul class="files">
+          <ul class="files" role="list">
             ${p.files.map(f => `
               <li><a href="${BLOB}${esc(f.path)}">
                 <span><span class="file-name">${esc(f.name)}</span><span class="file-desc">${esc(f.desc)}</span></span>
@@ -684,7 +717,10 @@ function renderProject(p) {
   main.querySelectorAll("[data-scroll]").forEach(a => a.addEventListener("click", e => {
     e.preventDefault();
     const target = document.getElementById(a.getAttribute("href").slice(1));
+    const heading = target.querySelector("h2") || target;
+    heading.tabIndex = -1;
     target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    heading.focus({ preventScroll: true });
   }));
 
   main.querySelectorAll("[data-lightbox]").forEach(b => b.addEventListener("click", () => openLightbox(p.performers[+b.dataset.lightbox], b)));
@@ -720,6 +756,9 @@ function setNav(which) {
 let firstRoute = true;
 function route() {
   const hash = location.hash || "#/";
+  /* In-page anchors (#main, #auditions) are not routes. Without this, the skip link
+     re-rendered the index and threw the reader off the project page. */
+  if (!hash.startsWith("#/")) { if (firstRoute) renderIndex(); return; }
   const m = hash.match(/^#\/project\/([\w-]+)/);
   if (m) {
     const p = PROJECTS.find(x => x.id === m[1]);
@@ -729,6 +768,10 @@ function route() {
   renderIndex(firstRoute ? undefined : "return");
 }
 window.addEventListener("hashchange", () => { firstRoute = false; route(); });
+document.querySelector(".skip").addEventListener("click", e => {
+  e.preventDefault();
+  main.focus();
+});
 document.getElementById("year").textContent = new Date().getFullYear();
 route();
 </script>
