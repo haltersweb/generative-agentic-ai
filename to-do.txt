@@ -1,0 +1,11 @@
+Adina's review: have her confirm the two headshot descriptions against the images.
+
+Screen reader checks: confirm each description is heard once on the project page, and check the lightbox with VoiceOver on iPhone and NVDA with Firefox.
+
+Browser checks: try a real Windows High Contrast theme in Edge, and Safari at 400% zoom.
+
+Audition packet: change "UNLOCKED" to sentence case when you next edit the Markdown file.
+
+PDFs: run both through a PDF/UA checker such as PAC before sharing them outside your team.
+
+Hosting: confirm where the page is hosted. I'll write a short follow-up to CL-003.
