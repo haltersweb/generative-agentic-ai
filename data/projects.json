@@ -1,0 +1,229 @@
+[
+  {
+    "id": "wonderful",
+    "title": "Wonderful Life",
+    "medium": [
+      "Video"
+    ],
+    "tools": [
+      "Image generation",
+      "Kling 3.0"
+    ],
+    "status": "In pre-production",
+    "started": "September 2026",
+    "folder": "video/wonderful",
+    "summary": "Casting George Bailey for a modern transposition of \"It's a Wonderful Life\", using two original AI performers, directed audition readings, and a repeatable test method.",
+    "logline": "Two invented actors. One difficult role in the holiday classic \"It's a Wonderful Life\". A casting process built to find out which one can nail it.",
+    "description": "My agentic casting director, Eva, designed two fictional performers from scratch, generated their casting headshots, and wrote a director's audition packet that tests each man on the same two scenes: Potter's offer, and the night George breaks his children's models. The goal is to judge performance, not just a pretty frame.",
+    "castTitle": "The casting call",
+    "castNote": "Both performers are original fictional designs, not likenesses of real people. Their headshots are candidate references at age 40, and neither is locked yet.",
+    "performers": [
+      {
+        "name": "Daniel Reyes",
+        "initials": "DR",
+        "image": "video/wonderful/daniel-reyes-headshot-v1.png",
+        "alt": "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair greying at the temples, heavy dark brows, and dark brown eyes. He has light stubble and a faint closed-mouth smile, and looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
+        "desc": "Compact and broad-chested, quick and magnetic. A credit union director who could have been a successful entrepreneur.",
+        "objective": "Wants the world to acknowledge his value.",
+        "voice": "Middle-low pitch, forward resonance, quick conversational emphasis.",
+        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Warm medium-brown skin, close-set dark eyes, slightly bent nose, square jaw, silver starting at the temples, one deeper smile crease. Unretouched, a unique invented person."
+      },
+      {
+        "name": "Adrian Shaw",
+        "initials": "AS",
+        "image": "video/wonderful/adrian-shaw-headshot-v1.png",
+        "alt": "Casting headshot of Adrian Shaw, an AI-generated fictional performer. A lean man around 40 with light olive skin, high cheekbones, and a narrow, angular jaw with light stubble. His dark hair is tousled and swept back, with a few grey strands at the temples. He has brown almond-shaped eyes under straight dark brows and a neutral, closed-mouth expression. He wears a heather grey crew-neck sweater against a plain grey backdrop in soft, even light.",
+        "desc": "Lean, with a long neck and contained restless intelligence. A man who expected to become an architect.",
+        "objective": "Wants a life that feels commensurate with his promise.",
+        "voice": "Middle pitch, precise consonants, compressed phrase endings when holding back.",
+        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Light olive skin, high cheekbones, almond eyes under straight brows, subtly uneven angular jaw, stubborn crown, sparse silver at the temples. Attractive but ordinary, never model-perfect."
+      }
+    ],
+    "tests": [
+      {
+        "title": "Potter's offer",
+        "length": "About 60 seconds",
+        "setting": "George at 34, a glass conference room in daylight. Potter is an off-camera reader; only his hand enters the frame.",
+        "question": "Does George accept in his head before the handshake, and can his first refusal come before he can explain it?",
+        "readings": [
+          {
+            "performer": "Daniel Reyes",
+            "objective": "Let this man finally acknowledge what I am worth.",
+            "beats": [
+              [
+                "0–12s",
+                "Reads the salary twice. A held breath releases. His shoulders settle before the smile arrives."
+              ],
+              [
+                "12–28s",
+                "Enjoys the offer openly. The near-laugh is involuntary; for a moment he speaks as Potter's equal."
+              ],
+              [
+                "28–42s",
+                "Asks about Bailey as a practical detail, not a trap. Starts to answer, swallows it, asks for a day."
+              ],
+              [
+                "42–52s",
+                "Takes the hand with ordinary confidence. The smile drains while contact holds. The first no surprises him."
+              ],
+              [
+                "52–60s",
+                "The refusals gather speed before conviction catches up."
+              ]
+            ],
+            "watch": "Pleasure at being valued, without turning smug. It fails if he's suspicious of Potter from the start."
+          },
+          {
+            "performer": "Adrian Shaw",
+            "objective": "Let this offer reopen the future I thought was gone.",
+            "beats": [
+              [
+                "0–12s",
+                "Reads the figure and goes still for one beat. His eyes lift toward the view, then return."
+              ],
+              [
+                "12–28s",
+                "At the mention of travel his attention drifts; he's imagining movement. Real delight, not calculation."
+              ],
+              [
+                "28–42s",
+                "The question about Bailey comes fast, hoping for a solution. The request to talk to Mary is sincere."
+              ],
+              [
+                "42–52s",
+                "Takes the hand already anticipating the next step. The first no escapes him."
+              ],
+              [
+                "52–60s",
+                "Holds the hand a fraction too long. The refusals tumble over each other."
+              ]
+            ],
+            "watch": "Pleasure has to reach his body. It fails if the offer stays intellectual or the handshake plays as horror."
+          }
+        ]
+      },
+      {
+        "title": "The models",
+        "length": "50 to 55 seconds",
+        "setting": "George at 40 on Christmas Eve, just after a hard phone call. A warm living room, one static take, the children off camera.",
+        "question": "Can his anger become frightening, and can he see its cost in his children's faces without asking us to forgive him?",
+        "readings": [
+          {
+            "performer": "Daniel Reyes",
+            "objective": "Make the demands stop for one moment.",
+            "beats": [
+              [
+                "0–9s",
+                "Turns toward the piano too quickly. The second command is far louder than the room needs."
+              ],
+              [
+                "9–20s",
+                "Raises the newel knob, catches himself late, and sets it down with too much care."
+              ],
+              [
+                "20–29s",
+                "Clears the shelf of models in one fast sweep, a movement his practical body rarely allows."
+              ],
+              [
+                "29–42s",
+                "Turns back as if to speak, sees a child's face, and finds nothing to say."
+              ],
+              [
+                "42–55s",
+                "Takes his coat without meeting Mary's eyes. His apology runs out of breath. He leaves."
+              ]
+            ],
+            "watch": "The capable man becomes someone whose next move is uncertain. No self-pity, no rueful charm."
+          },
+          {
+            "performer": "Adrian Shaw",
+            "objective": "Stop the room from exposing the distance between my life and the life I imagined.",
+            "beats": [
+              [
+                "0–9s",
+                "Tries to hold still through the piano. His breath shortens, then the command breaks out at Janie."
+              ],
+              [
+                "9–20s",
+                "Lifts the knob on an ugly impulse, sees what's in his hand, and sets it down. No clean self-control."
+              ],
+              [
+                "20–29s",
+                "His eyes find the tower for less than a second. Then the whole shelf goes, with sudden force."
+              ],
+              [
+                "29–42s",
+                "Watches a fragment settle, looks up, and meets the children's silence. His jaw loosens."
+              ],
+              [
+                "42–55s",
+                "Attempts a precise apology and can't sustain it. His voice thins on Janie's name. He leaves."
+              ]
+            ],
+            "watch": "The danger stays immediate, never tastefully sad. Shame arrives only after the damage."
+          }
+        ]
+      }
+    ],
+    "pipeline": [
+      {
+        "stage": "Script and concept",
+        "state": "done",
+        "note": "Modern transposition, director's draft."
+      },
+      {
+        "stage": "Performer design",
+        "state": "done",
+        "note": "Two original candidates, headshots at 40."
+      },
+      {
+        "stage": "Audition direction",
+        "state": "done",
+        "note": "Four directed readings, adapted for Kling 3.0."
+      },
+      {
+        "stage": "Age references",
+        "state": "current",
+        "note": "Age-34 stills for the Potter scene."
+      },
+      {
+        "stage": "Rendered auditions",
+        "state": "next",
+        "note": "Three takes per candidate, reviewed side by side."
+      }
+    ],
+    "files": [
+      {
+        "name": "Audition packet",
+        "path": "video/wonderful/audition-packet.md",
+        "type": "Markdown",
+        "desc": "Full direction for both tests, both performers, and the review questions."
+      },
+      {
+        "name": "Audition packet for Kling 3.0",
+        "path": "video/wonderful/updated-audition-packet-for-Kling-3.md",
+        "type": "Markdown",
+        "desc": "The same tests rebuilt as image-to-video prompts with settings and reference plans."
+      },
+      {
+        "name": "Headshot prompts",
+        "path": "video/wonderful/headshot-prompts.md",
+        "type": "Markdown",
+        "desc": "The complete image prompts used to design each performer."
+      },
+      {
+        "name": "Daniel Reyes headshot",
+        "path": "video/wonderful/daniel-reyes-headshot-v1.png",
+        "type": "PNG",
+        "desc": "Candidate reference, version 1."
+      },
+      {
+        "name": "Adrian Shaw headshot",
+        "path": "video/wonderful/adrian-shaw-headshot-v1.png",
+        "type": "PNG",
+        "desc": "Candidate reference, version 1."
+      }
+    ],
+    "honesty": "No voice or moving performance has been generated yet. The readings above are direction I've written for the performers, not results I've observed. I'll record what actually happens once the auditions are rendered."
+  }
+]
