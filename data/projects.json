@@ -19,24 +19,58 @@
     "castNote": "Both performers are original fictional designs, not likenesses of real people. Their headshots are candidate references at age 40, and neither is locked yet.",
     "performers": [
       {
+        "id": "daniel-reyes",
         "name": "Daniel Reyes",
         "initials": "DR",
-        "image": "video/wonderful/daniel-reyes-headshot-v1.png",
-        "alt": "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair greying at the temples, heavy dark brows, and dark brown eyes. He has light stubble and a faint closed-mouth smile, and looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
+        "image": "video/wonderful/daniel-reyes-headshot-v2.jpg",
+        "alt": "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair with silver at the temples, heavy dark brows, and dark brown eyes. He is clean-shaven, with a faint closed-mouth smile that creases one cheek more deeply, and he looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
         "desc": "Compact and broad-chested, quick and magnetic. A credit union director who could have been a successful entrepreneur.",
         "objective": "Wants the world to acknowledge his value.",
         "voice": "Middle-low pitch, forward resonance, quick conversational emphasis.",
-        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Warm medium-brown skin, close-set dark eyes, slightly bent nose, square jaw, silver starting at the temples, one deeper smile crease. Unretouched, a unique invented person."
+        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Warm medium-brown skin, close-set dark eyes, slightly bent nose, square jaw, silver starting at the temples, one deeper smile crease. Unretouched, a unique invented person.",
+        "concept": {
+          "headline": "The man who could have made money",
+          "want": "He wants the world to acknowledge his value.",
+          "playingAge": "Anchor at 40, with an apparent present-day range of 37–42; distinct younger adult states.",
+          "physical": "Latino; 5 feet 10 inches, compact and broad through the chest. Warm medium-brown skin, close-set dark eyes, strong brows, a slightly bent nose, broad mouth, and substantial jaw. Thick black hair, silver beginning at the temples; one cheek creases more deeply when he smiles.",
+          "interpretation": "This George could sell, negotiate, raise capital, and compete with Sam. His frustration comes from knowing he possesses commercially valuable abilities and repeatedly using them where the financial return is smallest.",
+          "presence": "Immediate engagement. He makes eye contact, remembers your problem, and starts solving it before you finish explaining.",
+          "strengths": "Persuasive rhythm, quick status changes, pleasure in a successful negotiation. At Potter’s offer, his breath releases and he settles comfortably into the chair for the first time.",
+          "emotionalStrength": "He restores dignity by treating someone’s difficulty as solvable.",
+          "vulnerability": "He needs recognition more than he admits. Potter’s acknowledgment reaches him before the salary does.",
+          "contradiction": "A convincing winner who privately feels overtaken by everyone he grew up with.",
+          "whyHeWorks": "The $310,000 offer becomes painfully credible. His rejection costs him a future the audience has already seen him inhabit.",
+          "risk": "His fluency could make the credit union scenes feel too easy. We need moments when persuasion fails and he must pay personally.",
+          "costume": "Carefully maintained, moderately priced suits; repaired dress shoes; open collar after hours. Precise haircut, clean-shaven face, wedding ring polished by habitual turning.",
+          "effect": "The conflict centers on recognition and economic worth. Mary must be someone whose judgment matters enough to puncture his practiced confidence."
+        }
       },
       {
+        "id": "adrian-shaw",
         "name": "Adrian Shaw",
         "initials": "AS",
-        "image": "video/wonderful/adrian-shaw-headshot-v1.png",
+        "image": "video/wonderful/adrian-shaw-headshot-v1.jpg",
         "alt": "Casting headshot of Adrian Shaw, an AI-generated fictional performer. A lean man around 40 with light olive skin, high cheekbones, and a narrow, angular jaw with light stubble. His dark hair is tousled and swept back, with a few grey strands at the temples. He has brown almond-shaped eyes under straight dark brows and a neutral, closed-mouth expression. He wears a heather grey crew-neck sweater against a plain grey backdrop in soft, even light.",
         "desc": "Lean, with a long neck and contained restless intelligence. A man who expected to become an architect.",
         "objective": "Wants a life that feels commensurate with his promise.",
         "voice": "Middle pitch, precise consonants, compressed phrase endings when holding back.",
-        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Light olive skin, high cheekbones, almond eyes under straight brows, subtly uneven angular jaw, stubborn crown, sparse silver at the temples. Attractive but ordinary, never model-perfect."
+        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Light olive skin, high cheekbones, almond eyes under straight brows, subtly uneven angular jaw, stubborn crown, sparse silver at the temples. Attractive but ordinary, never model-perfect.",
+        "concept": {
+          "headline": "The man who cannot bear being ordinary",
+          "want": "He wants a life that feels commensurate with his promise.",
+          "playingAge": "Anchor at 40; apparent range 36–41, with fatigue and age carried through texture and behavior.",
+          "physical": "Mixed East Asian and white; 6 feet 0 inches, lean, long-necked, upright until exhausted. Light olive skin, high cheekbones, dark almond-shaped eyes beneath straight brows, a long nose with a rounded tip, defined lips, and a subtly uneven jaw. Dense straight black hair with a stubborn crown and sparse temple grey.",
+          "interpretation": "George grew up certain that his speed and imagination were taking him somewhere. He remains curious and verbally expansive, but wants each problem to yield to an elegant solution. Small compromises accumulate as private humiliations.",
+          "presence": "Focused, attractive, slightly demanding. He listens intensely, then answers too soon because he believes he already understands.",
+          "strengths": "Thought visible before speech, brittle excitement, emotional exposure after failed control. At Potter’s handshake, the first refusal escapes softly; he studies Potter’s face as though surprised by what he himself has said.",
+          "emotionalStrength": "He can imagine possibilities that other people have stopped allowing themselves.",
+          "vulnerability": "He fears he has mistaken potential for achievement.",
+          "contradiction": "A composed exterior containing an increasingly frantic need to prove his life has amounted to something.",
+          "whyHeWorks": "Pottersville strips away his explanations. At the library, Mary’s complete lack of recognition defeats the man who has always relied on making himself understood.",
+          "risk": "He could become aloof. Establish bodily pleasure early: delighted dancing, ridiculous travel enthusiasm, unguarded attraction, laughter that briefly ruins his composure.",
+          "costume": "An older fitted blazer, plain shirts carefully ironed, narrow wool trousers, repeatedly resoled shoes. Grooming is a small area he can still control.",
+          "effect": "The story becomes particularly intimate about shame. The final look at Mary is his acceptance that he can belong to a life he cannot completely explain."
+        }
       }
     ],
     "tests": [
@@ -213,17 +247,100 @@
       },
       {
         "name": "Daniel Reyes headshot",
-        "path": "video/wonderful/daniel-reyes-headshot-v1.png",
+        "path": "video/wonderful/daniel-reyes-headshot-v2.png",
         "type": "PNG",
-        "desc": "Candidate reference, version 1."
+        "desc": "Full-resolution candidate reference, version 2."
       },
       {
         "name": "Adrian Shaw headshot",
         "path": "video/wonderful/adrian-shaw-headshot-v1.png",
         "type": "PNG",
-        "desc": "Candidate reference, version 1."
+        "desc": "Full-resolution candidate reference, version 1."
       }
     ],
-    "honesty": "No voice or moving performance has been generated yet. The readings above are direction I've written for the performers, not results I've observed. I'll record what actually happens once the auditions are rendered."
+    "honesty": "No voice or moving performance has been generated yet. The readings above are direction I've written for the performers, not results I've observed. I'll record what actually happens once the auditions are rendered.",
+    "conceptSections": [
+      {
+        "title": "Who he is",
+        "fields": [
+          {
+            "key": "physical",
+            "label": "Physical description"
+          },
+          {
+            "key": "costume",
+            "label": "Costume and grooming"
+          }
+        ]
+      },
+      {
+        "title": "How he plays George",
+        "fields": [
+          {
+            "key": "interpretation",
+            "label": "Casting interpretation"
+          },
+          {
+            "key": "presence",
+            "label": "Screen presence"
+          },
+          {
+            "key": "strengths",
+            "label": "Performance strengths"
+          },
+          {
+            "key": "emotionalStrength",
+            "label": "Emotional strength"
+          },
+          {
+            "key": "vulnerability",
+            "label": "Hidden vulnerability"
+          },
+          {
+            "key": "contradiction",
+            "label": "Visual and emotional contradiction"
+          }
+        ]
+      },
+      {
+        "title": "What he means for the film",
+        "fields": [
+          {
+            "key": "whyHeWorks",
+            "label": "Why he works"
+          },
+          {
+            "key": "risk",
+            "label": "Potential risk"
+          },
+          {
+            "key": "effect",
+            "label": "Effect on the film"
+          }
+        ]
+      }
+    ],
+    "compare": {
+      "title": "Compare the candidates",
+      "intro": "Two answers to one question: who is George Bailey now? These are the places where the two concepts differ most.",
+      "fields": [
+        {
+          "key": "vulnerability",
+          "label": "Hidden vulnerability"
+        },
+        {
+          "key": "contradiction",
+          "label": "Contradiction"
+        },
+        {
+          "key": "whyHeWorks",
+          "label": "Why he works"
+        },
+        {
+          "key": "risk",
+          "label": "Potential risk"
+        }
+      ]
+    }
   }
 ]

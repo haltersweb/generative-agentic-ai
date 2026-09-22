@@ -25,6 +25,11 @@ const spokenTime = t => {
   return m ? `${m[1]} to ${m[2]} seconds` : t;
 };
 let lastProjectId = null;
+let lastPerformerId = null;
+let lastLinkOrigin = "cast";
+const firstName = pf => pf.name.split(" ")[0];
+const performerUrl = (p, pf) => `#/project/${p.id}/${pf.id}`;
+const hasConcept = pf => pf.id && pf.concept;
 let activeFilter = "All";
 
 /* Images load from the repo when hosted on GitHub Pages, fall back to
@@ -42,6 +47,7 @@ function imgFallback(img) {
 
 /* ------------------------- Index view -------------------------- */
 function renderIndex(focusTarget) {
+  lastPerformerId = null;
   const media = ["All", ...new Set(PROJECTS.flatMap(p => p.medium))];
   const list = PROJECTS.map((p, i) => ({ p, i })).filter(({ p }) => activeFilter === "All" || p.medium.includes(activeFilter));
 
@@ -169,6 +175,7 @@ function renderProject(p) {
                     <p class="pf-label">Objective</p>
                     <p class="pf-objective">${esc(pf.objective)}</p>
                     ${pf.voice ? `<p class="voice">Proposed voice: ${esc(pf.voice.charAt(0).toLowerCase() + pf.voice.slice(1))}</p>` : ""}
+                    ${hasConcept(pf) ? `<a class="concept-link" data-origin="cast" href="${esc(performerUrl(p, pf))}">Read ${esc(firstName(pf))}'s full concept</a>` : ""}
                     <span class="lock">Candidate, not final</span>
                   </div>
                 </div>`).join("")}
@@ -178,6 +185,7 @@ function renderProject(p) {
       </div>
 
       <div class="wrap">
+        ${renderCompare(p)}
         ${p.tests ? `
         <section class="section" id="auditions" aria-labelledby="auditions-title">
           <div class="section-head">
@@ -287,12 +295,121 @@ function renderProject(p) {
     heading.focus({ preventScroll: true });
   }));
 
+  main.querySelectorAll(".concept-link").forEach(a => a.addEventListener("click", () => { lastLinkOrigin = a.dataset.origin; }));
+
   main.querySelectorAll("[data-lightbox]").forEach(b => b.addEventListener("click", () => openLightbox(p.performers[+b.dataset.lightbox], b)));
 
   document.title = `${p.title} — Adina Halter`;
   setNav("work");
+  /* Coming back from a performer dossier: return to the link you used */
+  const from = lastPerformerId && main.querySelector(`.concept-link[data-origin="${lastLinkOrigin}"][href="#/project/${CSS.escape(p.id)}/${CSS.escape(lastPerformerId)}"]`);
+  lastPerformerId = null;
+  if (from) {
+    from.scrollIntoView({ block: "center" });
+    from.focus({ preventScroll: true });
+  } else {
+    window.scrollTo(0, 0);
+    document.getElementById("project-title").focus({ preventScroll: true });
+  }
+}
+
+/* ----------------------- Candidate comparison ------------------ */
+function renderCompare(p) {
+  const cast = (p.performers || []).filter(hasConcept);
+  if (!p.compare || cast.length < 2) return "";
+  const c = p.compare;
+  return `
+        <section class="section compare" aria-labelledby="compare-title">
+          <div class="section-head">
+            <h2 id="compare-title">${esc(c.title)}</h2>
+            <p>${esc(c.intro)}</p>
+          </div>
+          <table class="compare-table" role="table">
+            <caption class="sr-only">Key contrasts between ${cast.map(pf => esc(pf.name)).join(" and ")}</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <td class="corner" role="cell"></td>
+                ${cast.map(pf => `
+                <th scope="col" role="columnheader">
+                  <span class="cmp-thumb" aria-hidden="true">${photo(pf)}</span>
+                  <span class="cmp-name">${esc(pf.name)}</span>
+                  <span class="cmp-headline">${esc(pf.concept.headline)}</span>
+                </th>`).join("")}
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              ${c.fields.map(f => `
+              <tr role="row">
+                <th scope="row" role="rowheader">${esc(f.label)}</th>
+                ${cast.map(pf => `<td role="cell">${esc(pf.concept[f.key] || "")}</td>`).join("")}
+              </tr>`).join("")}
+            </tbody>
+          </table>
+          <ul class="compare-links" role="list">
+            ${cast.map(pf => `<li><a class="concept-link" data-origin="compare" href="${esc(performerUrl(p, pf))}">Read ${esc(firstName(pf))}'s full concept</a></li>`).join("")}
+          </ul>
+        </section>`;
+}
+
+/* ----------------------- Performer dossier --------------------- */
+function renderPerformer(p, pf) {
+  lastProjectId = p.id;
+  lastPerformerId = pf.id;
+  const cast = p.performers.filter(hasConcept);
+  const k = cast.indexOf(pf);
+  const prev = cast[k - 1], next = cast[k + 1];
+  const c = pf.concept;
+  const role = p.id === "wonderful" ? "George Bailey" : p.title;
+
+  main.innerHTML = `
+    <article class="view-enter dossier" aria-labelledby="performer-title">
+      <div class="screen">
+        <div class="wrap">
+          <a class="back" href="#/project/${esc(p.id)}"><span aria-hidden="true">&larr;</span> ${esc(p.title)}</a>
+          <header class="dossier-head">
+            <figure class="dossier-photo">
+              ${photo(pf)}
+              ${pf.headshotNote ? `<figcaption>${esc(pf.headshotNote)}</figcaption>` : ""}
+            </figure>
+            <div class="dossier-intro">
+              <p class="status-line">Casting ${esc(role)}, candidate ${k + 1} of ${cast.length}</p>
+              <h1 id="performer-title" tabindex="-1">${esc(pf.name)}</h1>
+              <p class="dossier-headline">${esc(c.headline)}</p>
+              <p class="dossier-want">${esc(c.want)}</p>
+              <dl class="facts">
+                <div><dt>Role</dt><dd>${esc(role)}</dd></div>
+                <div><dt>Playing age</dt><dd>${esc(c.playingAge)}</dd></div>
+                <div><dt>Status</dt><dd>Candidate, not final</dd></div>
+              </dl>
+            </div>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrap">
+        ${(p.conceptSections || []).map((g, gi) => {
+          const fields = g.fields.filter(f => c[f.key]);
+          if (!fields.length) return "";
+          return `
+        <section class="section concept-group" aria-labelledby="group-${gi}">
+          <h2 id="group-${gi}">${esc(g.title)}</h2>
+          <dl class="concept-fields">
+            ${fields.map(f => `<div><dt>${esc(f.label)}</dt><dd>${esc(c[f.key])}</dd></div>`).join("")}
+          </dl>
+        </section>`;
+        }).join("")}
+
+        <nav class="pager" aria-label="Other candidates">
+          ${prev ? `<a href="${esc(performerUrl(p, prev))}"><small>Previous candidate</small><span>${esc(prev.name)}</span></a>` : `<a href="#/project/${esc(p.id)}"><small>Back to</small><span>${esc(p.title)}</span></a>`}
+          ${next ? `<a href="${esc(performerUrl(p, next))}" style="text-align:right"><small>Next candidate</small><span>${esc(next.name)}</span></a>` : `<a href="#/project/${esc(p.id)}" style="text-align:right"><small>Back to</small><span>${esc(p.title)}</span></a>`}
+        </nav>
+      </div>
+    </article>`;
+
+  document.title = `${pf.name} — ${p.title} — Adina Halter`;
+  setNav("work");
   window.scrollTo(0, 0);
-  document.getElementById("project-title").focus({ preventScroll: true });
+  document.getElementById("performer-title").focus({ preventScroll: true });
 }
 
 /* -------------------------- Lightbox --------------------------- */
@@ -323,9 +440,11 @@ function route() {
   /* In-page anchors (#main, #auditions) are not routes. Without this, the skip link
      re-rendered the index and threw the reader off the project page. */
   if (!hash.startsWith("#/")) { if (firstRoute) renderIndex(); return; }
-  const m = hash.match(/^#\/project\/([\w-]+)/);
+  const m = hash.match(/^#\/project\/([\w-]+)(?:\/([\w-]+))?/);
   if (m) {
     const p = PROJECTS.find(x => x.id === m[1]);
+    const pf = p && m[2] && (p.performers || []).find(x => x.id === m[2] && hasConcept(x));
+    if (pf) return renderPerformer(p, pf);
     if (p) return renderProject(p);
   }
   if (hash === "#/about") return renderIndex("about");
