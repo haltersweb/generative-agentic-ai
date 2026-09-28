@@ -1,6 +1,6 @@
 POTTER
 (potter's hand enters screen tapping at iPad on the desk which has the contract on it.)
-I want you to manage my properties. Three hundred thousand a year.  Three-year contract. Starting Monday.
+I want you to manage my properties. Three hundred thousand a year. Starting Monday.
 
 (George picks up iPad with the job offer on it, reading it incredulously for about 2 seconds.)
 
@@ -24,7 +24,7 @@ GEORGE
 (tentatively, but importantly as he furrows his brow a bit while returning eye contact to Potter) Well, what happens to Bailey?
 
 POTTER
-Oh, confound it, man, are you afraid of success? I'm offering you a three year contract at three hundred thousand a year, starting today. Is it a deal or isn't it?
+Oh, confound it, man, are you afraid of success? I'm offering you three hundred thousand a year, starting Monday. Yes or no?
 
 GEORGE
 (his eyes dart about between looking at Potter and looking down conflicted, not wanting to blow this offer, but something in the back of his mind is uneasy) Well, Mr. Potter, I... I... I know I ought to jump at the chance, but I... I just... (leaning in a bit and looking at Potter as if hoping what he's going to ask is reasonable) I wonder if it would be possible for you to give me twenty-four hours to think it over?
