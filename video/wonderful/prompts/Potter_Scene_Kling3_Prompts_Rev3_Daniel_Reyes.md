@@ -39,8 +39,8 @@ Every other moment is fully locked off.
 |---|---|---|---|---|---|
 | C01 | Potter | 13 | 8 s | Hand taps iPad, the offer | Seated, stunned, eyes on iPad |
 | C02 | George | 6 | 6 s | Angles iPad up, "Three hun…" | iPad angled up, eyes on screen |
-| C03 | Potter | 10 | 6 s | "…nicest house in town." | iPad still angled up, eyes on Potter |
-| C04 | Potter | 15 | 7 s | "Your wife… two a year." | iPad flat on desk under his hands |
+| C03 | Potter | 10 | 4 s | "…nicest house in town." | iPad still angled up, eyes on Potter |
+| C04 | Potter | 15 | 7 s | "Your wife… two a year." | iPad flat, screen up with contract; hands beside it |
 | C05 | Potter | 7 | 5 s | "…would you, George?" | Suppressed smile |
 | C06 | George | 12 | 7 s | "Would I?" and looks around | Amused, on Potter |
 | C07 | George | 10 | 6 s | Points at himself, "George Bailey." | Grin of disbelief |
@@ -124,11 +124,11 @@ George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Lat
 
 ## C03 — "The nicest house in town"
 
-Start frame: last frame of C02 · 6 s · Potter speaks
+Start frame: last frame of C02 · 4 s · Potter speaks
 
 ```
 [Scene Setup]
-6-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+4-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
 
 [Character Identity]
 George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame.
@@ -137,9 +137,9 @@ George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charc
 George sits behind the desk, the iPad still angled up in his hands as at the start. His eyes are already on Potter at camera-left and stay there, never into the lens.
 
 [Performance & Audio Timeline]
-0.0–0.5 s: George looking at Potter, still stunned. Silent.
-0.5–4.5 s: POTTER speaks offscreen. George is silent: lips closed, no mouth or jaw speech movement. Holding Potter's gaze, the first flicker of temptation shows in his eyes and a slower, deeper breath.
-4.5–6.0 s: Silence. George keeps the iPad angled up, looking at Potter.
+0.0–0.3 s: George looking at Potter, still stunned. Silent.
+0.3–3.5 s: POTTER speaks offscreen. George is silent: lips closed, no mouth or jaw speech movement. Holding Potter's gaze, the first flicker of temptation shows in his eyes and a slower, deeper breath.
+3.5–4.0 s: Silence. George keeps the iPad angled up, looking at Potter.
 
 [Dialogue Script]
 POTTER (OFFSCREEN VOICE ONLY) says: "You wouldn't mind living in the nicest house in town."
@@ -152,7 +152,7 @@ Potter, offscreen voice only: 81-year-old man, dry, unhurried, courteous, slight
 
 ## C04 — "Your wife… two a year"
 
-Start frame: last frame of C03 · 7 s · Potter speaks
+Start frame: last frame of C03 · 7 s · Potter speaks · If your Kling build has a negative prompt field, add: `iPad back facing up, flipped iPad, blank or black screen, aluminum back of tablet`
 
 ```
 [Scene Setup]
@@ -162,12 +162,12 @@ Start frame: last frame of C03 · 7 s · Potter speaks
 George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame.
 
 [Blocking & Eyeline]
-George sits behind the desk. During the clip he slowly lowers the angled iPad and lays it flat on the desk, both hands resting on it. His eyes drift briefly to middle distance, then return to Potter at camera-left, never into the lens.
+George sits behind the desk holding the iPad angled up toward him, its screen facing him. During the clip he tips the far edge of the iPad forward and down onto the desk, so the screen swings from facing him to facing up at the ceiling. It comes to rest flat in its original spot, exactly as at the start of the scene: screen side up and lit, showing the same contract document with "Offer" and "$300,000", upside down to the camera and readable to George. The iPad never turns over; its plain back is never visible once it is down. He lets go and rests both hands on the desk on either side of the iPad, not covering the screen. His eyes drift briefly to middle distance, then return to Potter at camera-left, never into the lens.
 
 [Performance & Audio Timeline]
 0.0–0.4 s: George looking at Potter. Silent.
-0.4–5.8 s: POTTER speaks offscreen. George is silent: lips closed, no mouth or jaw speech movement. His eyes go briefly unfocused as he pictures his wife and the trips; the corners of his closed mouth begin to lift despite himself. He lowers the iPad flat onto the desk.
-5.8–7.0 s: Silence. George's hands rest on the iPad; his eyes return to Potter.
+0.4–5.8 s: POTTER speaks offscreen. George is silent: lips closed, no mouth or jaw speech movement. His eyes go briefly unfocused as he pictures his wife and the trips; the corners of his closed mouth begin to lift despite himself. He tips the iPad forward and down until it lies flat, screen up, the contract showing.
+5.8–7.0 s: Silence. The iPad lies flat, screen up with the contract visible; George's hands rest on the desk beside it; his eyes return to Potter.
 
 [Dialogue Script]
 POTTER (OFFSCREEN VOICE ONLY) says: "Your wife in clothes she didn't order off a screen. Real trips, two a year."
@@ -190,7 +190,7 @@ Start frame: last frame of C04 · 5 s · Potter speaks
 George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame.
 
 [Blocking & Eyeline]
-George sits behind the desk, hands resting on the iPad lying flat on the desk. Eyeline camera-left toward Potter, never into the lens.
+George sits behind the desk, hands resting on the desk on either side of the iPad, which lies flat, screen up with the contract visible. Eyeline camera-left toward Potter, never into the lens.
 
 [Performance & Audio Timeline]
 0.0–0.3 s: Silent.
@@ -295,11 +295,11 @@ Potter, offscreen voice only: 81-year-old man, dry, unhurried, courteous, slight
 
 ## C09 — "What happens to Bailey?"
 
-Start frame: last frame of C08 · 10 s · George speaks
+Start frame: last frame of C08 · 8 s · George speaks
 
 ```
 [Scene Setup]
-10-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+8-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
 
 [Character Identity]
 George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame.
@@ -309,10 +309,10 @@ George sits behind the desk and settles back in his chair, hands sliding back to
 
 [Performance & Audio Timeline]
 0.0–1.5 s: A soft chuckle; he settles back in his chair, shoulders easing. No words.
-1.5–5.0 s: Silent. His eyes wander up and off as he pictures the house, the clothes, the trips; a small private smile.
-5.0–7.0 s: Silent. The smile fades; his brow furrows. His eyes return to Potter.
-7.0–8.8 s: GEORGE speaks, tentative but weighty, brow furrowed, eyes on Potter.
-8.8–10.0 s: Silence. Sitting back, brow furrowed, waiting.
+1.5–4.0 s: Silent. His eyes wander up and off as he pictures the house, the clothes, the trips; a small private smile.
+4.0–5.0 s: Silent. The smile fades; his brow furrows. His eyes return to Potter.
+5.0–6.8 s: GEORGE speaks, tentative but weighty, brow furrowed, eyes on Potter.
+6.8–8.0 s: Silence. Sitting back, brow furrowed, waiting.
 
 [Dialogue Script]
 GEORGE says: "Well, what happens to Bailey?"
@@ -332,21 +332,53 @@ Start frame: last frame of C09 · 5 s · Potter speaks
 5-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
 
 [Character Identity]
+George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame. George is the listener in this clip; the only voice comes from offscreen Potter.
+
+[Blocking & Eyeline]
+George sits back in his chair, hands near the desk edge. His eyes stay on Potter at camera-left, drop briefly to the desk, then return to Potter. Never into the lens. His lips stay pressed together and completely motionless for the whole clip; only his eyes, brows, breath and shoulders move.
+
+[Performance & Audio Timeline]
+0.0–0.3 s: Silent. George's eyes on Potter.
+0.3–1.6 s: POTTER speaks offscreen, first phrase, with the first edge of impatience. George listens, eyes on Potter, mouth closed and still.
+1.6–2.0 s: No speech. George gives a slight flinch in his shoulders; his eyes drop to the desk. Mouth closed and still.
+2.0–3.6 s: POTTER speaks offscreen, second phrase. George's eyes stay down on the desk, brows drawn. Mouth closed and still.
+3.6–4.4 s: Silence. George's eyes come back up to Potter, stung.
+4.4–5.0 s: Silence. George looking at Potter, mouth closed.
+
+[Dialogue Script]
+POTTER (OFFSCREEN VOICE ONLY) says: "Oh, confound it, man,"
+POTTER (OFFSCREEN VOICE ONLY) says: "are you afraid of success?"
+
+[Audio Settings]
+Potter, offscreen voice only: 81-year-old man, dry, unhurried, courteous but now with a first edge of impatience, slightly thin with age. George says nothing and makes no vocal sound; his lips never move. Quiet office room tone. No music, narration or words beyond the script.
+```
+
+### C10 fallback — George listening, no dialogue (Potter's line added in post)
+
+Use this only if the version above still gives Potter's line to George. It has no dialogue at all, so Kling has nothing to lip-sync. Lay Potter's line over it in DaVinci so that "Oh, confound it, man," ends at about 1.6 s and "are you afraid of success?" runs from about 2.0 s to 3.6 s. If one of your failed takes had the right Potter voice and timing, you can take the audio from that take and discard its picture.
+
+```
+[Scene Setup]
+5-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+
+[Character Identity]
 George Bailey: @Daniel_Reyes_34, 34, clean-shaven, black side-parted hair, charcoal suit, pale blue open-collar shirt, wedding ring on left hand. He is the only person in frame. Mr. Potter, 81, sits offscreen at camera-left and never appears; no hand enters frame.
 
 [Blocking & Eyeline]
-George sits back in his chair, hands near the desk edge. Eyeline camera-left toward Potter, dropping briefly to the desk. Never into the lens.
+George sits back in his chair, hands near the desk edge. His eyes stay on Potter at camera-left, drop briefly to the desk, then return to Potter. Never into the lens. His lips stay pressed together and completely motionless for the whole clip; only his eyes, brows, breath and shoulders move.
 
 [Performance & Audio Timeline]
-0.0–0.3 s: Silent.
-0.3–3.3 s: POTTER speaks offscreen with the first edge of impatience. George is silent: lips closed, no mouth or jaw speech movement. A slight flinch; his eyes drop to the desk; his jaw tightens.
-3.3–5.0 s: Silence. George's eyes come back to Potter, stung.
+0.0–1.6 s: George listens to Potter, eyes on him, mouth closed and still.
+1.6–2.0 s: George gives a slight flinch in his shoulders, as if stung by a sharp remark; his eyes drop to the desk.
+2.0–3.6 s: His eyes stay down on the desk, brows drawn, listening.
+3.6–4.4 s: His eyes come back up to Potter, stung.
+4.4–5.0 s: George looking at Potter, mouth closed.
 
 [Dialogue Script]
-POTTER (OFFSCREEN VOICE ONLY) says: "Oh, confound it, man, are you afraid of success?"
+No dialogue. Nobody speaks in this clip.
 
 [Audio Settings]
-Potter, offscreen voice only: 81-year-old man, dry, unhurried, courteous but now with a first edge of impatience, slightly thin with age. George makes no vocal sound in this clip. Quiet office room tone. No music, narration or words beyond the script.
+No speech of any kind. Quiet office room tone and George's natural breathing only. No music or narration.
 ```
 
 ---
