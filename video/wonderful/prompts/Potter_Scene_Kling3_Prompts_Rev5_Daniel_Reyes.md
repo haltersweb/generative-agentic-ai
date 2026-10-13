@@ -2,6 +2,39 @@
 
 Rev 5 prepared 2026-10-08 (Rev 4 prepared 2026-09-29). Spoken words from the director's Potter sides v2, with "starting Monday" both times. Format from the Kling Working Guide v1. Only the text inside the grey code blocks goes into Kling.
 
+## Rev 5.10 (2026-10-09)
+
+- **Approved:** C24 (Rev 5.6 attack version), C25a (take 2021_1 trimmed to 5.5 s) and C25a2 (take 2717_1).
+- **C25a2 added:** the cost/ring beat as its own 6 s silent clip, with the hand raised to chest height and the face toward camera. Lessons: silent beats placed after a line get skipped, and Kling can't twist a ring, so design "look at the hand, close the fist" instead.
+- **C25b** starts from C25a2's end frame. Remaining: C25b.
+
+## Rev 5.9 (2026-10-09)
+
+- **New split exit (C25a + C25b), now being tried.** The line and a private "cost" beat (the wedding ring, his family one step above poverty) play in the locked medium framing. Then a silent pan carries him out the door. The single-clip C25 stays below as the script-faithful alternative.
+
+## Rev 5.8 (2026-10-09)
+
+- **C25 delivery (director: "needs more oomph"):** the line is now George's last word, a cold, deliberate verdict at full voice: contempt on top, pity underneath, and he has won. He turns back with his chin up, hits "small", "sad" and "expensive", holds a beat with a cold curl of the mouth, then exits. The line moves earlier (3.2 s) so it doesn't feel rushed. He looks past the camera's left side, never into the lens. The door and pan are unchanged; they worked. The locked fallback now has the same delivery.
+
+## Rev 5.7 (2026-10-09)
+
+- **C24 approved** (Rev 5.6 attack version).
+- **C25 tidied:** removed "the desk leaves frame left" (the desk has been out of frame since C18); silent beats marked "No speech" and allowed-words lines added (FM-009) in both the pan version and the locked fallback; the empty-door ending is described positively instead of "No person in frame" (FM-005).
+
+## Rev 5.6 (2026-10-09)
+
+- **C24 script change (director):** "In the... in the whole vast configuration of things," becomes "In the whole vast configuration of things,". The stumble was draining the scene.
+- **C24 played as an attack:** the objective is to make Potter feel as small as he made George feel. He leans in, jabs his finger, curls his lip, keeps his eyes unblinking, and the pinch snaps shut. The clip is cut to 8 s with short silent beats, so the long gaps that killed the energy in the 1186 takes can't come back. Total raw runtime is now 154 s.
+
+## Rev 5.5 (2026-10-09)
+
+- **C24 reworked to the director's notes.** The energy carries over from C23: the objective is to hurt Potter back, and the stumble comes from anger outrunning words, not from searching. The line is split into three phrases, every silent beat is marked, there's an allowed-words line, and "configuration" has a pronunciation note, with an ElevenLabs fix in post as the fallback. Removed: "relish", "savouring", "grim pleasure" and "dark humour", which pushed the delivery toward conversation.
+
+## Rev 5.4 (2026-10-09)
+
+- **C23 wording:** he leans his upper body forward instead of leaning "over the desk", which has been out of frame since C18.
+- **C24 start-frame refresh:** identity had drifted by the end of C23 (FM-007), so C24 starts from a refreshed still. Prompt below.
+
 ## Rev 5.3 (2026-10-09)
 
 - **C20 reworked to the director's note.** The comma in "wait a minute here" is gone. The line is split into three phrases (PP-003), and the clip builds from shame (eyes on the floor, a bitter breath at himself) into anger (jaw set, eyes up and locked, hand up, a hard final line). It stops short of shouting so that C21 can peak.
@@ -109,10 +142,10 @@ Every other moment is fully locked off.
 | C21 | George | 12 | 6 s | Conviction; anger with grief under it | Breathing hard, eyes bright |
 | C22 | George | 10 | 4 s | Fury finds words | Hand up, mid-sentence |
 | C23 | George | 17 | 6 s | Momentum; into Potter's space | Leaning forward over the desk |
-| C24 | George | 19 | 10 s | Searching, then relishing the image | Holding the pinch |
+| C24 | George | 17 | 8 s | Searching, then relishing the image | Holding the pinch |
 | C25 | George | 9 | 11 s | Pity, not rage; the exit | Holds on the closed door |
 
-Total raw runtime: 156 s.
+Total raw runtime: 154 s.
 
 ---
 
@@ -904,14 +937,14 @@ Start frame: last frame of C22 · 6 s · George speaks
 George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw; one cheek creases deeper when he smiles. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
 
 [Blocking & Eyeline]
-George stands behind the desk, right hand gesturing toward the left edge of the frame. Before the last line he leans forward over the desk toward the left edge of the frame, staying fully in frame. Eyeline on the left edge of the frame at eye level, never into the lens.
+George stands behind the desk, right hand gesturing toward the left edge of the frame. Before the last line he leans his upper body forward toward the left edge of the frame, staying fully in frame. Eyeline on the left edge of the frame at eye level, never into the lens.
 
 [Performance & Audio Timeline]
 Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
 Inner state: He is gaining momentum and enjoying, for the first time, telling this man the truth.
 0.0–0.1 s: Silent, hand still raised.
 0.1–3.5 s: GEORGE, first line, continuing the same sentence, building speed and force.
-3.5–3.8 s: He leans forward over the desk.
+3.5–3.8 s: No speech. He leans his upper body forward toward the left edge of the frame.
 3.8–5.4 s: GEORGE, second line, leaning in, hitting each word.
 5.4–6.0 s: Silence. Leaning forward, glaring toward the left edge of the frame.
 
@@ -925,67 +958,179 @@ George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Lat
 
 ---
 
+## C24 start-frame refresh (Rev 5.4, 2026-10-09)
+
+After five chained clips since the C18 reset, the face at the end of C23 has drifted. Compared with the headshot it is narrower, longer and more gaunt, the eyes are deeper-set, the skin is more orange, and there are new moles. Before C24, run the last usable frame of C23 through the image tool. Prefer a frame with the mouth closed or nearly closed from the final ~0.3 s. This is also the first test of the FM-007 refresh method.
+
+**References:** that C23 frame (pose, framing, room, light) plus Daniel's age-34 close-up and full-body references (face and suit). Check the result against the headshot before using it.
+
+```
+Use case identity-preserve. Edit the supplied film still, keeping it the same image: same framing, camera position, room, window, daylight, pose, posture, wardrobe and angry expression. Restore the man's face to match the supplied portrait references exactly: fictional Daniel Reyes, age 34, Latino, broad face with a substantial square jaw, warm medium-brown skin with natural even tone, close-set dark brown eyes under strong brows, slightly bent nose, broad mouth, neat black side-parted hair, clean-shaven. Keep his face fuller and broader, not narrow or gaunt; no added moles or blemishes; natural skin texture, not orange. Mouth closed, jaw set, eyes hard and fixed toward the left edge of the frame. Plain charcoal wool suit with clean, smooth fabric; pale blue open-collar shirt. Clean the window view of any blotchy texture. Single photographic still, no text.
+```
+
+---
+
 ## C24 — "Scurvy little spider"
 
-Start frame: last frame of C23 · 10 s (Rev 5: was 8 s) · George speaks
+Start frame: refreshed C23 still (ChatGPT identity refresh, approved 2026-10-09) · 8 s (was 10 s) · George speaks · Rev 5.6 (2026-10-09): director's script change: the stumble is cut, so the line is now "In the whole vast configuration of things,". The insult is played as an attack. George is invested in wounding Potter, closing the distance and aiming every word. Silent beats are kept short so the energy never drops. Budget 3–4 takes; the pronunciation fallback (ElevenLabs patch) still applies.
 
 ```
 [Scene Setup]
-10-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+8-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
 
 [Character Identity]
-George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw; one cheek creases deeper when he smiles. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
+George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
 
 [Blocking & Eyeline]
-George stands behind the desk. He searches for the words with a circling hand, spreads his hands on "the whole vast configuration of things", then pinches his right thumb and forefinger together toward the left edge of the frame as if holding a tiny spider he wants to crush. Eyeline on the left edge of the frame at eye level, never into the lens.
+George stands, eyes boring into the left edge of the frame at eye level, never into the lens. He leans in toward the left edge of the frame as he speaks, staying fully in frame. His right index finger jabs toward the left edge of the frame on the stressed words, then his thumb and forefinger pinch together toward it, as if holding a tiny spider he wants to crush.
 
 [Performance & Audio Timeline]
 Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
-Inner state: He stumbles, finds the image, and takes grim pleasure in it. A flash of dark humour returns.
-0.0–0.2 s: Silent.
-0.2–1.8 s: GEORGE starts: "In the..." He can't find the words; his hand circles; a breath.
-1.8–6.6 s: GEORGE continues through "nothing but a", gesturing wide, gathering force.
-6.6–8.4 s: GEORGE lands "scurvy little spider" with relish and disgust, the pinch tightening as if crushing it. He finishes the last word completely.
-8.4–10.0 s: Silence. He holds the pinch; a bitter breath that is almost a laugh.
+Inner state: He has been humiliated, and now he goes on the attack. He wants this man to feel as small as he made George feel: every word is a blow, aimed to wound. He is not explaining or reflecting; he is attacking.
+0.0–0.2 s: No speech. Jaw clenched, breathing hard, glaring at the left edge of the frame.
+0.2–3.0 s: GEORGE, first phrase, hard and fast, leaning in; his finger jabs on "whole" and "things"; contempt curls his upper lip.
+3.0–3.2 s: No speech. A sharp breath in through the nose.
+3.2–5.0 s: GEORGE, second phrase, lower and harder, chin down, eyes narrowed, each word bitten off.
+5.0–6.6 s: GEORGE, third phrase, spat straight at the left edge of the frame, hitting each word; the pinch snaps shut as if crushing it. He finishes the last word completely.
+6.6–8.0 s: No speech. He holds the pinch toward the left edge of the frame, nostrils flared, lip curled in disgust, breathing hard, eyes unblinking.
 
 [Dialogue Script]
-GEORGE says: "In the... in the whole vast configuration of things, I'd say you were nothing but a scurvy little spider."
+GEORGE says: "In the whole vast configuration of things,"
+GEORGE says: "I'd say you were nothing but a"
+GEORGE says: "scurvy little spider."
 
 [Audio Settings]
-George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Searching, then savouring the last three words; keep the stumble "In the... in the". Quiet office room tone and George's natural breathing. No music, narration or words beyond the script.
+George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Loud, hard and cutting, an attack, never chatty, reflective or amused; "scurvy little spider" is spat with full contempt. Pronounce "configuration" in standard American English as kun-fig-yuh-RAY-shun, stress on RAY. The only words in this clip are George's three phrases above, each said once; nobody else speaks. Quiet office room tone and George's hard breathing. No music or narration.
+```
+
+---
+
+## C25a / C25b — Split exit (Rev 5.9, director trying this staging, 2026-10-09)
+
+Why: in the single-clip C25 the camera ends wide on the door, so George's face is too small to show what the refusal costs him and his family. In the split, the line and the cost play in the medium framing, with the wedding ring as the trigger (the payoff of the ring turns in C04 and C12). Then the proven pan carries him out silently. The line now comes before the walk rather than at the door; exit staging was always provisional. The single-clip C25 below is kept as the script-faithful alternative.
+
+### C25a — The line and the cost
+
+Start frame: C24_last_frame_192.png · 8 s · George speaks · Locked camera · Approved: take 2021_1, trimmed to end at 5.5 s, before the unrendered cost beat (8 renders). The cost beat now lives in C25a2.
+
+```
+[Scene Setup]
+8-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+
+[Character Identity]
+George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
+
+[Blocking & Eyeline]
+George stands, eyes on the left edge of the frame at eye level, never into the lens. After the line he turns his head and shoulders away toward the right of frame, his face in three-quarter profile to camera, and his right thumb finds the wedding band on his left hand.
+
+[Performance & Audio Timeline]
+Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
+Inner state: Toward this man, steel: a calm, final verdict. But once he turns away, the cost hits him: his wife will go on wearing clothes ordered off a screen, his family will go on living one step above poverty, and he will go on being the man who never made anything of himself. He has just thrown it all away, and no one sees it.
+0.0–0.3 s: No speech. He lowers the pinching hand, eyes steady on the left edge of the frame.
+0.3–3.3 s: GEORGE speaks, firm and unhurried, full voice but not shouting, every word placed; steady eyes, no smile. He finishes the last word completely.
+3.3–3.8 s: No speech. He holds the look, face still.
+3.8–4.6 s: No speech. He turns away toward the right of frame, into three-quarter profile.
+4.6–8.0 s: No speech. His right thumb turns the wedding band on his left hand. The mask drops: his jaw loosens, he swallows hard, a shaky breath out, his eyes fill and lose focus, his shoulders sink a little.
+
+[Dialogue Script]
+GEORGE says: "A small, sad spider in a very expensive web."
+
+[Audio Settings]
+George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Firm, steady, final; full voice, not shouting, never soft, mocking or amused. The only words in this clip are George's one line above, said once; nobody else speaks. After the line, only a hard swallow and a shaky breath out. Quiet office room tone. No music or narration.
+```
+
+### C25a2 — The cost (ring beat)
+
+Start frame: C25a_trimmed_last_frame.png (C25a take 2021_1, trimmed to 5.5 s) · 6 s · No dialogue · Locked camera · Approved: take 2717_1 (16 renders; most failed on awkward hand behaviour; Kling never managed a ring twist)
+
+Why it's its own clip: when the cost beat followed the line inside C25a, Kling skipped it in all 8 takes. It played as a hold, and the ring was out of frame at waist height. As a one-intention clip with the hand raised into frame, it works.
+
+```
+[Scene Setup]
+6-second continuous shot, 1:1 square. Fixed tripod, locked-off camera: no pan, tilt, zoom, dolly, handheld shake, reframing or cuts. Keep the start image's framing, background and lighting exactly. Glass-walled fourth-floor office, soft daylight. The camera stays still; the actor may move.
+
+[Character Identity]
+George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
+
+[Blocking & Eyeline]
+George stands facing the camera's left side, his face toward camera, never into the lens. He raises his left hand to chest height, in frame, and looks down at the gold wedding band on it; his right thumb rubs the ring. Then his left hand closes into a fist around the ring.
+
+[Performance & Audio Timeline]
+Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
+Inner state: The fight is over, and now the cost lands. He looks at the ring and sees his wife and children: the house they won't have, the clothes she'll keep ordering off a screen, another ten years one step above poverty, and himself, still the man who never made anything of his life. He chose that for them.
+0.0–0.4 s: No speech. His hard stare drains; his eyes drop.
+0.4–2.0 s: No speech. He raises his left hand to chest height and looks down at the wedding band; his right thumb rubs it slowly.
+2.0–4.0 s: No speech. His left hand closes into a fist around the ring. He shuts his eyes, presses his lips together, his jaw works, his brows draw up in pain.
+4.0–5.2 s: No speech. A long, shaky breath out; his shoulders sink.
+5.2–6.0 s: No speech. He opens his eyes, wet and unfocused, lowers the fist, and steadies himself to leave.
+
+[Dialogue Script]
+No dialogue. Nobody speaks in this clip.
+
+[Audio Settings]
+No speech of any kind. Only George's breathing: a long, shaky exhale. Quiet office room tone. No music or narration.
+```
+
+### C25b — The exit
+
+Start frame: last frame of the approved C25a2 take (prefer a sharp, mouth-closed frame, e.g. 2717_1 frame 120) · 7 s · No dialogue · Pan right, then locked · Budget 2 takes
+
+```
+[Scene Setup]
+7-second continuous shot, 1:1 square. Tripod camera, locked off except one move: as George walks to the door, the camera pans smoothly right at his walking pace, level: no tilt, zoom, dolly, shake or cuts. The pan stops with the office door framed, then locks completely still. Same room and soft daylight as the start image. The door is frosted glass in a slim dark metal frame, set in the office's glass wall.
+
+[Character Identity]
+George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
+
+[Blocking & Eyeline]
+George walks right to the frosted-glass door as the camera pans with him, opens it, steps through without looking back, and pulls it shut.
+
+[Performance & Audio Timeline]
+Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
+Inner state: He carries the weight of what he has just given up; his walk is steady but heavier than before.
+0.0–2.2 s: No speech. He walks to the door; the camera pans right with him and stops with the door framed. Camera locked from 2.2 s onward.
+2.2–4.0 s: No speech. He opens the door, steps through without looking back, and pulls it shut; it closes at about 4 s.
+4.0–7.0 s: No speech. The frame holds on the closed frosted-glass door; George's blurred shape fades away behind the glass and only the still door remains.
+
+[Dialogue Script]
+No dialogue. Nobody speaks in this clip.
+
+[Audio Settings]
+No speech of any kind. Footsteps, the door opening, the door closing firmly, then quiet office room tone. No music or narration.
 ```
 
 ---
 
 ## C25 — The exit and the closed door
 
-Start frame: last frame of C24 · 11 s · George speaks · Camera pans right once as George heads for the door, then locks on the door · If the pan gives a wrong door or new geography, use the locked-camera fallback after this clip
+Start frame: last frame of the approved C24 take · 11 s · George speaks · Rev 5.8: director's note, more oomph. The line is now a cold, deliberate parting shot, not quiet pity · Camera pans right once as George heads for the door, then locks on the door · If the pan gives a wrong door or new geography, use the locked-camera fallback after this clip
 
 ```
 [Scene Setup]
 11-second continuous shot, 1:1 square. Tripod camera, locked off except one move: when George heads for the door, the camera pans smoothly right at his walking pace, level: no tilt, zoom, dolly, shake or cuts. The pan stops with the office door (just offscreen right of the starting view) framed, then locks completely still. Same room and soft daylight as the start image. The door is frosted glass in a slim dark metal frame, set in the office's glass wall.
 
 [Character Identity]
-George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw; one cheek creases deeper when he smiles. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
+George Bailey: @Daniel_Reyes_34, Latino, 34, compact and broad-chested; warm medium-brown skin, close-set dark eyes, strong brows, slightly bent nose, broad mouth, strong jaw. Neat black side-parted hair, clean-shaven. Charcoal suit, pale blue open-collar shirt, gold wedding band on left hand. He is the only person in frame.
 
 [Blocking & Eyeline]
-George strides right to the frosted-glass door as the camera pans with him; the desk leaves frame left. He opens the door, looks back over his shoulder toward the left of frame, speaks, steps through and pulls it shut. Never into the lens.
+George strides right to the frosted-glass door as the camera pans with him. He opens the door, stops, and turns his head and shoulders back toward the left of frame, looking past the camera's left side at eye level, never into the lens. He delivers the line, holds a beat, then steps through and pulls the door shut.
 
 [Performance & Audio Timeline]
 Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
-Inner state: The rage is spent. What's left is pity and contempt, and a quiet grief for what he has just given up.
-0.0–0.8 s: Silent. He lowers his hand, holds his gaze toward the left edge of the frame a moment, turns.
-0.8–3.0 s: Silent. He strides to the door; the camera pans right with him and stops with the door framed. Camera locked from 3.0 s onward.
-3.0–3.8 s: Silent. He opens the door, stops, and looks back over his shoulder.
-3.8–6.3 s: GEORGE speaks, quiet and level, with pity more than anger.
-6.3–8.0 s: Silent. He steps through and pulls the door shut; it closes at about 8 s.
-8.0–11.0 s: The frame holds on the closed frosted-glass door; George's blurred shape fades away behind the glass. No person in frame.
+Inner state: He wants the last word: the one line this man will never forget. The shouting is over; now he is cold, controlled and certain, delivering a verdict. Contempt on top, a sliver of pity under it. He has won.
+0.0–0.6 s: No speech. He lowers the pinching hand and turns.
+0.6–2.6 s: No speech. He strides to the door; the camera pans right with him and stops with the door framed. Camera locked from 2.6 s onward.
+2.6–3.2 s: No speech. He opens the door, stops, and turns back, chin up, eyes hard.
+3.2–6.4 s: GEORGE speaks, slow, deliberate and cutting, full voice but not shouting, placing each word like a blow; he leans on "small", "sad" and "expensive", and lets "web" land with disdain. He finishes the last word completely.
+6.4–7.0 s: No speech. He holds the look a beat, a faint, cold curl at one corner of his mouth.
+7.0–8.4 s: No speech. He steps through and pulls the door shut firmly; it closes at about 8.4 s.
+8.4–11.0 s: No speech. The frame holds on the closed frosted-glass door; George's blurred shape fades away behind the glass and only the still door remains.
 
 [Dialogue Script]
 GEORGE says: "A small, sad spider in a very expensive web."
 
 [Audio Settings]
-George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Quiet, level, pitying. Footsteps, the door opening, the door closing firmly, then quiet office room tone. No music, narration or words beyond the script.
+George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Cold, deliberate and cutting, a final verdict; full voice, not shouting, never soft or mumbled. The only words in this clip are George's one line above, said once; nobody else speaks. Footsteps, the door opening, the door closing firmly, then quiet office room tone. No music or narration.
 ```
 
 ### C25 fallback — locked camera, exit frame right (door heard, not seen)
@@ -1004,19 +1149,19 @@ George lowers his hand, turns and walks toward the right edge of the frame. At t
 
 [Performance & Audio Timeline]
 Acting: a skilled, fully committed screen actor. Every inner change is clearly visible in his eyes, brows, breath, hands and torso; grounded and natural, never exaggerated or cartoonish.
-Inner state: The rage is spent. What's left is pity and contempt, and a quiet grief for what he has just given up.
-0.0–0.8 s: Silent. He lowers his hand, holds his gaze toward the left edge of the frame a moment, and turns.
-0.8–2.6 s: Silent. He walks to the right edge of the frame; his right hand reaches out of frame; the sound of a door handle and a door opening.
-2.6–3.2 s: Silent. He stops and looks back over his shoulder toward the left edge of the frame.
-3.2–5.7 s: GEORGE speaks, quiet and level, with pity more than anger. He finishes the last word completely.
-5.7–6.8 s: Silent. He steps out of frame right; the door closes firmly offscreen.
-6.8–9.0 s: The frame holds on the quiet, empty office: the desk, the chair and soft daylight on the glass walls.
+Inner state: He wants the last word: the one line this man will never forget. The shouting is over; now he is cold, controlled and certain, delivering a verdict. Contempt on top, a sliver of pity under it. He has won.
+0.0–0.8 s: No speech. He lowers the pinching hand, holds his gaze toward the left edge of the frame a moment, and turns.
+0.8–2.6 s: No speech. He walks to the right edge of the frame; his right hand reaches out of frame; the sound of a door handle and a door opening.
+2.6–3.2 s: No speech. He stops and looks back over his shoulder toward the left edge of the frame.
+3.2–5.7 s: GEORGE speaks, slow, deliberate and cutting, full voice but not shouting, leaning on "small", "sad" and "expensive". He finishes the last word completely.
+5.7–6.8 s: No speech. He steps out of frame right; the door closes firmly offscreen.
+6.8–9.0 s: No speech. The frame holds on the quiet, empty office: the window, the town view and soft daylight on the glass walls.
 
 [Dialogue Script]
 GEORGE says: "A small, sad spider in a very expensive web."
 
 [Audio Settings]
-George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Quiet, level, pitying. Footsteps, a door opening offscreen right, the door closing firmly, then quiet office room tone. No music, narration or words beyond the script.
+George speaks with the bound @Daniel_Reyes_34 voice: 34-year-old man, slight Latino accent. Cold, deliberate and cutting, a final verdict; full voice, not shouting, never soft or mumbled. The only words in this clip are George's one line above, said once; nobody else speaks. Footsteps, a door opening offscreen right, the door closing firmly, then quiet office room tone. No music, narration or words beyond the script.
 ```
 
 ---
