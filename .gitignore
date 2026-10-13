@@ -1,5 +1,8 @@
 .DS_Store
 
+#Site-specific
+wonderful_life_parlor_scene.mov
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

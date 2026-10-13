@@ -1,296 +1,441 @@
-[
-  {
-    "id": "wonderful",
-    "title": "Wonderful Life",
-    "medium": [
-      "Video"
-    ],
-    "tools": [
-      "Image generation",
-      "Kling 3.0"
-    ],
-    "status": "In pre-production",
-    "started": "September 2026",
-    "folder": "video/wonderful",
-    "summary": "Casting George Bailey for a modern transposition of \"It's a Wonderful Life\", using two original AI performers, directed audition readings, and a repeatable test method.",
-    "logline": "Two invented actors. One difficult role in the holiday classic \"It's a Wonderful Life\". A casting process built to find out which one can nail it.",
-    "description": "My agentic casting director, Eva, designed two fictional performers from scratch, generated their casting headshots, and wrote a director's audition packet that tests each man on the same two scenes: Potter's offer, and the night George breaks his children's models. The goal is to judge performance, not just a pretty frame.",
-    "castTitle": "The casting call",
-    "castNote": "Both performers are original fictional designs, not likenesses of real people. Their headshots are candidate references at age 40, and neither is locked yet.",
-    "performers": [
-      {
-        "id": "daniel-reyes",
-        "name": "Daniel Reyes",
-        "initials": "DR",
-        "image": "video/wonderful/daniel-reyes-headshot-v2.jpg",
-        "alt": "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair with silver at the temples, heavy dark brows, and dark brown eyes. He is clean-shaven, with a faint closed-mouth smile that creases one cheek more deeply, and he looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
-        "desc": "Compact and broad-chested, quick and magnetic. A credit union director who could have been a successful entrepreneur.",
-        "objective": "Wants the world to acknowledge his value.",
-        "voice": "Middle-low pitch, forward resonance, quick conversational emphasis.",
-        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Warm medium-brown skin, close-set dark eyes, slightly bent nose, square jaw, silver starting at the temples, one deeper smile crease. Unretouched, a unique invented person.",
-        "concept": {
-          "headline": "The man who could have made money",
-          "want": "He wants the world to acknowledge his value.",
-          "playingAge": "Anchor at 40, with an apparent present-day range of 37–42; distinct younger adult states.",
-          "physical": "Latino; 5 feet 10 inches, compact and broad through the chest. Warm medium-brown skin, close-set dark eyes, strong brows, a slightly bent nose, broad mouth, and substantial jaw. Thick black hair, silver beginning at the temples; one cheek creases more deeply when he smiles.",
-          "interpretation": "This George could sell, negotiate, raise capital, and compete with Sam. His frustration comes from knowing he possesses commercially valuable abilities and repeatedly using them where the financial return is smallest.",
-          "presence": "Immediate engagement. He makes eye contact, remembers your problem, and starts solving it before you finish explaining.",
-          "strengths": "Persuasive rhythm, quick status changes, pleasure in a successful negotiation. At Potter’s offer, his breath releases and he settles comfortably into the chair for the first time.",
-          "emotionalStrength": "He restores dignity by treating someone’s difficulty as solvable.",
-          "vulnerability": "He needs recognition more than he admits. Potter’s acknowledgment reaches him before the salary does.",
-          "contradiction": "A convincing winner who privately feels overtaken by everyone he grew up with.",
-          "whyHeWorks": "The $310,000 offer becomes painfully credible. His rejection costs him a future the audience has already seen him inhabit.",
-          "risk": "His fluency could make the credit union scenes feel too easy. We need moments when persuasion fails and he must pay personally.",
-          "costume": "Carefully maintained, moderately priced suits; repaired dress shoes; open collar after hours. Precise haircut, clean-shaven face, wedding ring polished by habitual turning.",
-          "effect": "The conflict centers on recognition and economic worth. Mary must be someone whose judgment matters enough to puncture his practiced confidence."
-        }
-      },
-      {
-        "id": "adrian-shaw",
-        "name": "Adrian Shaw",
-        "initials": "AS",
-        "image": "video/wonderful/adrian-shaw-headshot-v1.jpg",
-        "alt": "Casting headshot of Adrian Shaw, an AI-generated fictional performer. A lean man around 40 with light olive skin, high cheekbones, and a narrow, angular jaw with light stubble. His dark hair is tousled and swept back, with a few grey strands at the temples. He has brown almond-shaped eyes under straight dark brows and a neutral, closed-mouth expression. He wears a heather grey crew-neck sweater against a plain grey backdrop in soft, even light.",
-        "desc": "Lean, with a long neck and contained restless intelligence. A man who expected to become an architect.",
-        "objective": "Wants a life that feels commensurate with his promise.",
-        "voice": "Middle pitch, precise consonants, compressed phrase endings when holding back.",
-        "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Light olive skin, high cheekbones, almond eyes under straight brows, subtly uneven angular jaw, stubborn crown, sparse silver at the temples. Attractive but ordinary, never model-perfect.",
-        "concept": {
-          "headline": "The man who cannot bear being ordinary",
-          "want": "He wants a life that feels commensurate with his promise.",
-          "playingAge": "Anchor at 40; apparent range 36–41, with fatigue and age carried through texture and behavior.",
-          "physical": "Mixed East Asian and white; 6 feet 0 inches, lean, long-necked, upright until exhausted. Light olive skin, high cheekbones, dark almond-shaped eyes beneath straight brows, a long nose with a rounded tip, defined lips, and a subtly uneven jaw. Dense straight black hair with a stubborn crown and sparse temple grey.",
-          "interpretation": "George grew up certain that his speed and imagination were taking him somewhere. He remains curious and verbally expansive, but wants each problem to yield to an elegant solution. Small compromises accumulate as private humiliations.",
-          "presence": "Focused, attractive, slightly demanding. He listens intensely, then answers too soon because he believes he already understands.",
-          "strengths": "Thought visible before speech, brittle excitement, emotional exposure after failed control. At Potter’s handshake, the first refusal escapes softly; he studies Potter’s face as though surprised by what he himself has said.",
-          "emotionalStrength": "He can imagine possibilities that other people have stopped allowing themselves.",
-          "vulnerability": "He fears he has mistaken potential for achievement.",
-          "contradiction": "A composed exterior containing an increasingly frantic need to prove his life has amounted to something.",
-          "whyHeWorks": "Pottersville strips away his explanations. At the library, Mary’s complete lack of recognition defeats the man who has always relied on making himself understood.",
-          "risk": "He could become aloof. Establish bodily pleasure early: delighted dancing, ridiculous travel enthusiasm, unguarded attraction, laughter that briefly ruins his composure.",
-          "costume": "An older fitted blazer, plain shirts carefully ironed, narrow wool trousers, repeatedly resoled shoes. Grooming is a small area he can still control.",
-          "effect": "The story becomes particularly intimate about shame. The final look at Mary is his acceptance that he can belong to a life he cannot completely explain."
-        }
-      }
-    ],
-    "tests": [
-      {
-        "title": "Potter's offer",
-        "length": "About 60 seconds",
-        "setting": "George at 34, a glass conference room in daylight. Potter is an off-camera reader; only his hand enters the frame.",
-        "question": "Does George accept in his head before the handshake, and can his first refusal come before he can explain it?",
-        "readings": [
-          {
-            "performer": "Daniel Reyes",
-            "objective": "Let this man finally acknowledge what I am worth.",
-            "beats": [
-              [
-                "0–12s",
-                "Reads the salary twice. A held breath releases. His shoulders settle before the smile arrives."
-              ],
-              [
-                "12–28s",
-                "Enjoys the offer openly. The near-laugh is involuntary; for a moment he speaks as Potter's equal."
-              ],
-              [
-                "28–42s",
-                "Asks about Bailey as a practical detail, not a trap. Starts to answer, swallows it, asks for a day."
-              ],
-              [
-                "42–52s",
-                "Takes the hand with ordinary confidence. The smile drains while contact holds. The first no surprises him."
-              ],
-              [
-                "52–60s",
-                "The refusals gather speed before conviction catches up."
-              ]
-            ],
-            "watch": "Pleasure at being valued, without turning smug. It fails if he's suspicious of Potter from the start."
+{
+  "upcoming": {
+    "title": "Ancient Coin Identification",
+    "summary": "Numismatic Identifier for Greek and Roman Coins is in development: a web and mobile app."
+  },
+  "projects": [
+    {
+      "id": "wonderful",
+      "title": "Wonderful Life",
+      "medium": [
+        "Video"
+      ],
+      "tools": [
+        "Image generation",
+        "Kling 3.0"
+      ],
+      "status": "In pre-production",
+      "started": "September 2026",
+      "folder": "video/wonderful",
+      "summary": "Casting George Bailey for a modern transposition of \"It's a Wonderful Life\", using two original AI performers, directed audition readings, and a repeatable test method.",
+      "logline": "Two invented actors. One difficult role in the holiday classic \"It's a Wonderful Life\". A casting process built to find out which one can nail it.",
+      "description": "My agentic casting director, Eva, designed two fictional performers from scratch, generated their casting headshots, and wrote a director's audition packet that tests each man on the same two scenes: Potter's offer, and the night George breaks his children's models. The goal is to judge performance, not just a pretty frame.",
+      "castTitle": "The casting call",
+      "castNote": "Both performers are original fictional designs, not likenesses of real people. Their headshots are candidate references at age 40, and neither is locked yet.",
+      "performers": [
+        {
+          "id": "daniel-reyes",
+          "name": "Daniel Reyes",
+          "initials": "DR",
+          "image": "video/wonderful/daniel-reyes-headshot-v2.jpg",
+          "alt": "Casting headshot of Daniel Reyes, an AI-generated fictional performer. A man around 40 with warm medium-brown skin, short thick black hair with silver at the temples, heavy dark brows, and dark brown eyes. He is clean-shaven, with a faint closed-mouth smile that creases one cheek more deeply, and he looks straight at the camera. He wears a heather grey crew-neck T-shirt against a plain warm grey backdrop in soft, even light.",
+          "desc": "Compact and broad-chested, quick and magnetic. A credit union director who could have been a successful entrepreneur.",
+          "objective": "Wants the world to acknowledge his value.",
+          "voice": "Middle-low pitch, forward resonance, quick conversational emphasis.",
+          "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Warm medium-brown skin, close-set dark eyes, slightly bent nose, square jaw, silver starting at the temples, one deeper smile crease. Unretouched, a unique invented person.",
+          "concept": {
+            "headline": "The man who could have made money",
+            "want": "He wants the world to acknowledge his value.",
+            "playingAge": "Anchor at 40, with an apparent present-day range of 37–42; distinct younger adult states.",
+            "physical": "Latino; 5 feet 10 inches, compact and broad through the chest. Warm medium-brown skin, close-set dark eyes, strong brows, a slightly bent nose, broad mouth, and substantial jaw. Thick black hair, silver beginning at the temples; one cheek creases more deeply when he smiles.",
+            "interpretation": "This George could sell, negotiate, raise capital, and compete with Sam. His frustration comes from knowing he possesses commercially valuable abilities and repeatedly using them where the financial return is smallest.",
+            "presence": "Immediate engagement. He makes eye contact, remembers your problem, and starts solving it before you finish explaining.",
+            "strengths": "Persuasive rhythm, quick status changes, pleasure in a successful negotiation. At Potter’s offer, his breath releases and he settles comfortably into the chair for the first time.",
+            "emotionalStrength": "He restores dignity by treating someone’s difficulty as solvable.",
+            "vulnerability": "He needs recognition more than he admits. Potter’s acknowledgment reaches him before the salary does.",
+            "contradiction": "A convincing winner who privately feels overtaken by everyone he grew up with.",
+            "whyHeWorks": "The $300,000 offer becomes painfully credible. His rejection costs him a future the audience has already seen him inhabit.",
+            "risk": "His fluency could make the credit union scenes feel too easy. We need moments when persuasion fails and he must pay personally.",
+            "costume": "Carefully maintained, moderately priced suits; repaired dress shoes; open collar after hours. Precise haircut, clean-shaven face, wedding ring polished by habitual turning.",
+            "effect": "The conflict centers on recognition and economic worth. Mary must be someone whose judgment matters enough to puncture his practiced confidence."
           },
-          {
-            "performer": "Adrian Shaw",
-            "objective": "Let this offer reopen the future I thought was gone.",
-            "beats": [
-              [
-                "0–12s",
-                "Reads the figure and goes still for one beat. His eyes lift toward the view, then return."
-              ],
-              [
-                "12–28s",
-                "At the mention of travel his attention drifts; he's imagining movement. Real delight, not calculation."
-              ],
-              [
-                "28–42s",
-                "The question about Bailey comes fast, hoping for a solution. The request to talk to Mary is sincere."
-              ],
-              [
-                "42–52s",
-                "Takes the hand already anticipating the next step. The first no escapes him."
-              ],
-              [
-                "52–60s",
-                "Holds the hand a fraction too long. The refusals tumble over each other."
-              ]
-            ],
-            "watch": "Pleasure has to reach his body. It fails if the offer stays intellectual or the handshake plays as horror."
+          "media": {
+            "audition": {
+              "label": "Watch Daniel's audition",
+              "scene": "Potter's offer",
+              "duration": "2:38",
+              "madeWith": "Kling 3.0",
+              "standard": "media/daniel_audition_cc.mp4",
+              "described": "media/daniel_audition_described_cc.mp4",
+              "describedLabel": "Watch the audio-described version",
+              "standardLabel": "Switch back to the standard version",
+              "captions": "media/daniel_audition_captions.en.vtt",
+              "transcript": "media/daniel_audition_descriptive_transcript.txt",
+              "transcriptLabel": "Read the descriptive transcript"
+            }
           }
-        ]
-      },
-      {
-        "title": "The models",
-        "length": "50 to 55 seconds",
-        "setting": "George at 40 on Christmas Eve, just after a hard phone call. A warm living room, one static take, the children off camera.",
-        "question": "Can his anger become frightening, and can he see its cost in his children's faces without asking us to forgive him?",
-        "readings": [
-          {
-            "performer": "Daniel Reyes",
-            "objective": "Make the demands stop for one moment.",
-            "beats": [
-              [
-                "0–9s",
-                "Turns toward the piano too quickly. The second command is far louder than the room needs."
-              ],
-              [
-                "9–20s",
-                "Raises the newel knob, catches himself late, and sets it down with too much care."
-              ],
-              [
-                "20–29s",
-                "Clears the shelf of models in one fast sweep, a movement his practical body rarely allows."
-              ],
-              [
-                "29–42s",
-                "Turns back as if to speak, sees a child's face, and finds nothing to say."
-              ],
-              [
-                "42–55s",
-                "Takes his coat without meeting Mary's eyes. His apology runs out of breath. He leaves."
-              ]
-            ],
-            "watch": "The capable man becomes someone whose next move is uncertain. No self-pity, no rueful charm."
+        },
+        {
+          "id": "adrian-shaw",
+          "name": "Adrian Shaw",
+          "initials": "AS",
+          "image": "video/wonderful/adrian-shaw-headshot-v1.jpg",
+          "alt": "Casting headshot of Adrian Shaw, an AI-generated fictional performer. A lean man around 40 with light olive skin, high cheekbones, and a narrow, angular jaw with light stubble. His dark hair is tousled and swept back, with a few grey strands at the temples. He has brown almond-shaped eyes under straight dark brows and a neutral, closed-mouth expression. He wears a heather grey crew-neck sweater against a plain grey backdrop in soft, even light.",
+          "desc": "Lean, with a long neck and contained restless intelligence. A man who expected to become an architect.",
+          "objective": "Wants a life that feels commensurate with his promise.",
+          "voice": "Middle pitch, precise consonants, compressed phrase endings when holding back.",
+          "prompt": "Photorealistic casting headshot, 85mm at eye level, soft daylight, warm grey backdrop, apparent age exactly 40. Light olive skin, high cheekbones, almond eyes under straight brows, subtly uneven angular jaw, stubborn crown, sparse silver at the temples. Attractive but ordinary, never model-perfect.",
+          "concept": {
+            "headline": "The man who cannot bear being ordinary",
+            "want": "He wants a life that feels commensurate with his promise.",
+            "playingAge": "Anchor at 40; apparent range 36–41, with fatigue and age carried through texture and behavior.",
+            "physical": "Mixed East Asian and white; 6 feet 0 inches, lean, long-necked, upright until exhausted. Light olive skin, high cheekbones, dark almond-shaped eyes beneath straight brows, a long nose with a rounded tip, defined lips, and a subtly uneven jaw. Dense straight black hair with a stubborn crown and sparse temple grey.",
+            "interpretation": "George grew up certain that his speed and imagination were taking him somewhere. He remains curious and verbally expansive, but wants each problem to yield to an elegant solution. Small compromises accumulate as private humiliations.",
+            "presence": "Focused, attractive, slightly demanding. He listens intensely, then answers too soon because he believes he already understands.",
+            "strengths": "Thought visible before speech, brittle excitement, emotional exposure after failed control. At Potter’s handshake, the first refusal escapes softly; he studies Potter’s face as though surprised by what he himself has said.",
+            "emotionalStrength": "He can imagine possibilities that other people have stopped allowing themselves.",
+            "vulnerability": "He fears he has mistaken potential for achievement.",
+            "contradiction": "A composed exterior containing an increasingly frantic need to prove his life has amounted to something.",
+            "whyHeWorks": "Pottersville strips away his explanations. At the library, Mary’s complete lack of recognition defeats the man who has always relied on making himself understood.",
+            "risk": "He could become aloof. Establish bodily pleasure early: delighted dancing, ridiculous travel enthusiasm, unguarded attraction, laughter that briefly ruins his composure.",
+            "costume": "An older fitted blazer, plain shirts carefully ironed, narrow wool trousers, repeatedly resoled shoes. Grooming is a small area he can still control.",
+            "effect": "The story becomes particularly intimate about shame. The final look at Mary is his acceptance that he can belong to a life he cannot completely explain."
           },
-          {
-            "performer": "Adrian Shaw",
-            "objective": "Stop the room from exposing the distance between my life and the life I imagined.",
-            "beats": [
-              [
-                "0–9s",
-                "Tries to hold still through the piano. His breath shortens, then the command breaks out at Janie."
-              ],
-              [
-                "9–20s",
-                "Lifts the knob on an ugly impulse, sees what's in his hand, and sets it down. No clean self-control."
-              ],
-              [
-                "20–29s",
-                "His eyes find the tower for less than a second. Then the whole shelf goes, with sudden force."
-              ],
-              [
-                "29–42s",
-                "Watches a fragment settle, looks up, and meets the children's silence. His jaw loosens."
-              ],
-              [
-                "42–55s",
-                "Attempts a precise apology and can't sustain it. His voice thins on Janie's name. He leaves."
-              ]
-            ],
-            "watch": "The danger stays immediate, never tastefully sad. Shame arrives only after the damage."
+          "media": {
+            "status": "Audition in progress"
           }
-        ]
-      }
-    ],
-    "pipeline": [
-      {
-        "stage": "Script and concept",
-        "state": "done",
-        "note": "Modern transposition, director's draft."
-      },
-      {
-        "stage": "Performer design",
-        "state": "done",
-        "note": "Two original candidates, headshots at 40."
-      },
-      {
-        "stage": "Audition direction",
-        "state": "done",
-        "note": "Four directed readings, adapted for Kling 3.0."
-      },
-      {
-        "stage": "Age references",
-        "state": "current",
-        "note": "Age-34 stills for the Potter scene."
-      },
-      {
-        "stage": "Rendered auditions",
-        "state": "next",
-        "note": "Three takes per candidate, reviewed side by side."
-      }
-    ],
-    "files": [
-      {
-        "name": "Audition packet",
-        "path": "video/wonderful/audition-packet.md",
-        "type": "Markdown",
-        "desc": "Full direction for both tests, both performers, and the review questions."
-      },
-      {
-        "name": "Audition packet for Kling 3.0",
-        "path": "video/wonderful/updated-audition-packet-for-Kling-3.md",
-        "type": "Markdown",
-        "desc": "The same tests rebuilt as image-to-video prompts with settings and reference plans."
-      },
-      {
-        "name": "Headshot prompts",
-        "path": "video/wonderful/headshot-prompts.md",
-        "type": "Markdown",
-        "desc": "The complete image prompts used to design each performer."
-      },
-      {
-        "name": "Daniel Reyes headshot",
-        "path": "video/wonderful/daniel-reyes-headshot-v2.png",
-        "type": "PNG",
-        "desc": "Full-resolution candidate reference, version 2."
-      },
-      {
-        "name": "Adrian Shaw headshot",
-        "path": "video/wonderful/adrian-shaw-headshot-v1.png",
-        "type": "PNG",
-        "desc": "Full-resolution candidate reference, version 1."
-      }
-    ],
-    "honesty": "No voice or moving performance has been generated yet. The readings above are direction I've written for the performers, not results I've observed. I'll record what actually happens once the auditions are rendered.",
-    "conceptSections": [
-      {
-        "title": "Who he is",
+        }
+      ],
+      "tests": [
+        {
+          "title": "Potter's offer",
+          "length": "2–3 minutes",
+          "setting": "George at 34, a glass conference room in daylight. Potter is an off-camera reader; only his hand enters the frame.",
+          "question": "Does George accept in his head before the handshake, and can his first refusal come before he can explain it?",
+          "readings": [
+            {
+              "performer": "Daniel Reyes",
+              "objective": "Let this man finally acknowledge what I am worth.",
+              "beats": [
+                [
+                  "0–12s",
+                  "Reads the salary twice. A held breath releases. His shoulders settle before the smile arrives."
+                ],
+                [
+                  "12–28s",
+                  "Enjoys the offer openly. The near-laugh is involuntary; for a moment he speaks as Potter's equal."
+                ],
+                [
+                  "28–42s",
+                  "Asks about Bailey as a practical detail, not a trap. Starts to answer, swallows it, asks for a day."
+                ],
+                [
+                  "42–52s",
+                  "Takes the hand with ordinary confidence. The smile drains while contact holds. The first no surprises him."
+                ],
+                [
+                  "52–60s",
+                  "The refusals gather speed before conviction catches up."
+                ]
+              ],
+              "watch": "Pleasure at being valued, without turning smug. It fails if he's suspicious of Potter from the start.",
+              "rendered": {
+                "duration": "2:38",
+                "beats": [
+                  [
+                    "0:00–0:10",
+                    "Potter's offer arrives off-camera, a hand sliding a tablet across the table. George frowns at it before he picks it up to read."
+                  ],
+                  [
+                    "0:10–0:17",
+                    "He repeats the figure back as a question, and a slow grin arrives while he's still looking down at the screen."
+                  ],
+                  [
+                    "0:17–0:39",
+                    "Through the inducements he sets the tablet down beaming, then chuckles and jokes that Potter must have the wrong man, pointing at himself on his own name."
+                  ],
+                  [
+                    "0:40–0:51",
+                    "Potter's line about his ship coming in lands. The grin fades as his eyes go past the window to the town below."
+                  ],
+                  [
+                    "0:51–1:05",
+                    "He asks what becomes of the family business, gets brushed off, and takes the yes-or-no ultimatum with a hum, hands clasped, eyes lowered."
+                  ],
+                  [
+                    "1:07–1:20",
+                    "He hedges aloud that he ought to jump at it, fingertips pressed together, then asks for 24 hours to think it over."
+                  ],
+                  [
+                    "1:20–1:34",
+                    "Potter agrees and tells him to talk to his wife. George smiles, nods, and closes his eyes on his assent."
+                  ],
+                  [
+                    "1:34–1:42",
+                    "Now standing, he buttons his jacket and takes the offered hand. The confirmation is easy and ordinary on both sides."
+                  ],
+                  [
+                    "1:42–1:51",
+                    "The smile drops while the handshake still holds. He stares down at their clasped hands, pulls his free, and leaves Potter's hanging. His jaw sets."
+                  ],
+                  [
+                    "1:51–2:24",
+                    "The refusal comes out in a rush, then turns into an attack: a jabbed finger, and the charge that Potter spins webs and mistakes his money for the world."
+                  ],
+                  [
+                    "2:24–2:38",
+                    "He looks at his own hand, rubs the fingertips together, clenches it and winces. Then he turns and goes out through a frosted glass door, which clicks shut behind him."
+                  ]
+                ],
+                "note": "Taken from the rendered tape, not from the direction above. The take runs 2:38 against a directed 60 seconds, and plays the whole scene rather than the audition excerpt."
+              }
+            },
+            {
+              "performer": "Adrian Shaw",
+              "objective": "Let this offer reopen the future I thought was gone.",
+              "beats": [
+                [
+                  "0–12s",
+                  "Reads the figure and goes still for one beat. His eyes lift toward the view, then return."
+                ],
+                [
+                  "12–28s",
+                  "At the mention of travel his attention drifts; he's imagining movement. Real delight, not calculation."
+                ],
+                [
+                  "28–42s",
+                  "The question about Bailey comes fast, hoping for a solution. The request to talk to Mary is sincere."
+                ],
+                [
+                  "42–52s",
+                  "Takes the hand already anticipating the next step. The first no escapes him."
+                ],
+                [
+                  "52–60s",
+                  "Holds the hand a fraction too long. The refusals tumble over each other."
+                ]
+              ],
+              "watch": "Pleasure has to reach his body. It fails if the offer stays intellectual or the handshake plays as horror."
+            }
+          ]
+        },
+        {
+          "title": "The models",
+          "length": "50 to 55 seconds",
+          "setting": "George at 40 on Christmas Eve, just after a hard phone call. A warm living room, one static take, the children off camera.",
+          "question": "Can his anger become frightening, and can he see its cost in his children's faces without asking us to forgive him?",
+          "readings": [
+            {
+              "performer": "Daniel Reyes",
+              "objective": "Make the demands stop for one moment.",
+              "beats": [
+                [
+                  "0–9s",
+                  "Turns toward the piano too quickly. The second command is far louder than the room needs."
+                ],
+                [
+                  "9–20s",
+                  "Raises the newel knob, catches himself late, and sets it down with too much care."
+                ],
+                [
+                  "20–29s",
+                  "Clears the shelf of models in one fast sweep, a movement his practical body rarely allows."
+                ],
+                [
+                  "29–42s",
+                  "Turns back as if to speak, sees a child's face, and finds nothing to say."
+                ],
+                [
+                  "42–55s",
+                  "Takes his coat without meeting Mary's eyes. His apology runs out of breath. He leaves."
+                ]
+              ],
+              "watch": "The capable man becomes someone whose next move is uncertain. No self-pity, no rueful charm."
+            },
+            {
+              "performer": "Adrian Shaw",
+              "objective": "Stop the room from exposing the distance between my life and the life I imagined.",
+              "beats": [
+                [
+                  "0–9s",
+                  "Tries to hold still through the piano. His breath shortens, then the command breaks out at Janie."
+                ],
+                [
+                  "9–20s",
+                  "Lifts the knob on an ugly impulse, sees what's in his hand, and sets it down. No clean self-control."
+                ],
+                [
+                  "20–29s",
+                  "His eyes find the tower for less than a second. Then the whole shelf goes, with sudden force."
+                ],
+                [
+                  "29–42s",
+                  "Watches a fragment settle, looks up, and meets the children's silence. His jaw loosens."
+                ],
+                [
+                  "42–55s",
+                  "Attempts a precise apology and can't sustain it. His voice thins on Janie's name. He leaves."
+                ]
+              ],
+              "watch": "The danger stays immediate, never tastefully sad. Shame arrives only after the damage."
+            }
+          ]
+        }
+      ],
+      "pipeline": [
+        {
+          "stage": "Script and concept",
+          "state": "done",
+          "note": "Modern transposition, director's draft."
+        },
+        {
+          "stage": "Performer design",
+          "state": "done",
+          "note": "Two original candidates, headshots at 40."
+        },
+        {
+          "stage": "Audition direction",
+          "state": "done",
+          "note": "Four directed readings, adapted for Kling 3.0."
+        },
+        {
+          "stage": "Tooling evaluation",
+          "state": "current",
+          "note": "Rendering in Kling 3.0; evaluating Higgsfield as an alternative."
+        },
+        {
+          "stage": "Age references",
+          "state": "current",
+          "note": "Age-34 stills for the Potter scene."
+        },
+        {
+          "stage": "Rendered auditions",
+          "state": "current",
+          "note": "Daniel's tape is complete; Adrian's is in progress."
+        }
+      ],
+      "files": [
+        {
+          "name": "Audition packet",
+          "path": "video/wonderful/audition-packet.md",
+          "type": "Markdown",
+          "desc": "Full direction for both tests, both performers, and the review questions."
+        },
+        {
+          "name": "Audition packet for Kling 3.0",
+          "path": "video/wonderful/updated-audition-packet-for-Kling-3.md",
+          "type": "Markdown",
+          "desc": "The same tests rebuilt as image-to-video prompts with settings and reference plans."
+        },
+        {
+          "name": "Video prompts: Potter's offer, Daniel Reyes",
+          "path": "video/wonderful/prompts/Potter_Scene_Kling3_Prompts_Rev5_Daniel_Reyes.md",
+          "type": "Markdown",
+          "desc": "Revision 5 of the Kling 3.0 shot prompts that produced Daniel's rendered audition."
+        },
+        {
+          "name": "Headshot prompts",
+          "path": "video/wonderful/headshot-prompts.md",
+          "type": "Markdown",
+          "desc": "The complete image prompts used to design each performer."
+        },
+        {
+          "name": "Daniel Reyes headshot",
+          "path": "video/wonderful/daniel-reyes-headshot-v2.png",
+          "type": "PNG",
+          "desc": "Full-resolution candidate reference, version 2."
+        },
+        {
+          "name": "Adrian Shaw headshot",
+          "path": "video/wonderful/adrian-shaw-headshot-v1.png",
+          "type": "PNG",
+          "desc": "Full-resolution candidate reference, version 1."
+        },
+        {
+          "name": "Daniel Reyes audition, captions (WebVTT)",
+          "path": "media/daniel_audition_captions.en.vtt",
+          "type": "WebVTT",
+          "desc": "The 48 caption cues the player attaches to both versions of the tape."
+        },
+        {
+          "name": "Daniel Reyes audition, captions (SubRip)",
+          "path": "media/daniel_audition_captions.en.srt",
+          "type": "SRT",
+          "desc": "The same captions in SubRip, for upload to video platforms and editing tools."
+        },
+        {
+          "name": "Daniel Reyes audition, audio descriptions",
+          "path": "media/daniel_audition_descriptions.en.vtt",
+          "type": "WebVTT",
+          "desc": "The description script, timed to the gaps in dialogue. It is the source for the audio-described cut."
+        },
+        {
+          "name": "Daniel Reyes audition, descriptive transcript",
+          "path": "media/daniel_audition_descriptive_transcript.txt",
+          "type": "Text",
+          "desc": "Dialogue and described action as one readable document, linked beside the player."
+        }
+      ],
+      "honesty": "Daniel's audition tape is rendered and linked above; Adrian's is still in progress, so the two can't be compared side by side yet. The beat-by-beat readings are the direction I wrote beforehand, not a report of what the finished takes do. I'll record that once both performers are on tape.",
+      "conceptSections": [
+        {
+          "title": "Who he is",
+          "fields": [
+            {
+              "key": "physical",
+              "label": "Physical description"
+            },
+            {
+              "key": "costume",
+              "label": "Costume and grooming"
+            }
+          ]
+        },
+        {
+          "title": "How he plays George",
+          "fields": [
+            {
+              "key": "interpretation",
+              "label": "Casting interpretation"
+            },
+            {
+              "key": "presence",
+              "label": "Screen presence"
+            },
+            {
+              "key": "strengths",
+              "label": "Performance strengths"
+            },
+            {
+              "key": "emotionalStrength",
+              "label": "Emotional strength"
+            },
+            {
+              "key": "vulnerability",
+              "label": "Hidden vulnerability"
+            },
+            {
+              "key": "contradiction",
+              "label": "Visual and emotional contradiction"
+            }
+          ]
+        },
+        {
+          "title": "What he means for the film",
+          "fields": [
+            {
+              "key": "whyHeWorks",
+              "label": "Why he works"
+            },
+            {
+              "key": "risk",
+              "label": "Potential risk"
+            },
+            {
+              "key": "effect",
+              "label": "Effect on the film"
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "title": "Compare the candidates",
+        "intro": "Two answers to one question: who is George Bailey now? These are the places where the two concepts differ most.",
         "fields": [
           {
-            "key": "physical",
-            "label": "Physical description"
-          },
-          {
-            "key": "costume",
-            "label": "Costume and grooming"
-          }
-        ]
-      },
-      {
-        "title": "How he plays George",
-        "fields": [
-          {
-            "key": "interpretation",
-            "label": "Casting interpretation"
-          },
-          {
-            "key": "presence",
-            "label": "Screen presence"
-          },
-          {
-            "key": "strengths",
-            "label": "Performance strengths"
-          },
-          {
-            "key": "emotionalStrength",
-            "label": "Emotional strength"
+            "key": "audition",
+            "label": "Audition",
+            "type": "media"
           },
           {
             "key": "vulnerability",
@@ -298,13 +443,8 @@
           },
           {
             "key": "contradiction",
-            "label": "Visual and emotional contradiction"
-          }
-        ]
-      },
-      {
-        "title": "What he means for the film",
-        "fields": [
+            "label": "Contradiction"
+          },
           {
             "key": "whyHeWorks",
             "label": "Why he works"
@@ -312,35 +452,215 @@
           {
             "key": "risk",
             "label": "Potential risk"
+          }
+        ]
+      },
+      "testsIntro": "Both performers get the same scenes, camera, light, and timing, so the only variable is the performance. Auditions are shot on a static camera in a square frame. Switch between them to compare how each one is directed."
+    },
+    {
+      "id": "agents",
+      "title": "Engineered agents",
+      "medium": [
+        "Agents"
+      ],
+      "tools": [
+        "Claude",
+        "ChatGPT"
+      ],
+      "status": "In development",
+      "started": "September 2026",
+      "summary": "A working bench of specialist AI agents, each with a defined role, a review standard, and a record of what it has actually produced.",
+      "logline": "Not one assistant doing everything. A team of specialists, each accountable for one craft.",
+      "description": "Every project in this portfolio is made with agents I design, brief, and correct. Each one holds a single role and is judged by what it delivers. This page describes those roles and standards; the prompts and configurations behind them stay private.",
+      "roster": {
+        "title": "The bench",
+        "intro": "Nine agents, at different stages of development, listed alphabetically by surname. Each card says what the agent is accountable for, what it has produced, and which model it runs on.",
+        "note": "These agents are proprietary, so there are no files to browse for this project. What's described here is each agent's role and the standard it's held to, not how it's built.",
+        "agents": [
+          {
+            "name": "Jonathan Bordeaux",
+            "sortName": "Bordeaux",
+            "role": "Storyboard artist and shot designer",
+            "stage": "Refining",
+            "does": "Designs storyboards and shot plans for vertical short-play AI drama, working out how each beat is framed before anything is generated.",
+            "meta": [
+              {
+                "label": "In production",
+                "value": "Beat map for the vertical short-play AI treatment of scenes from “It’s a Wonderful Life.”"
+              }
+            ],
+            "flags": [
+              "Claude"
+            ]
           },
           {
-            "key": "effect",
-            "label": "Effect on the film"
+            "name": "Lydia Cornetto",
+            "sortName": "Cornetto",
+            "role": "Screenwriter and script consultant",
+            "stage": "Refining",
+            "does": "Writes for truthful storytelling, bringing two decades in feature film and television to vertical short-play AI work.",
+            "meta": [
+              {
+                "label": "In production",
+                "value": "Vertical short-play AI modern treatment of scenes from “It’s a Wonderful Life.”"
+              }
+            ],
+            "flags": [
+              "Claude"
+            ]
+          },
+          {
+            "name": "Stephen Cross",
+            "sortName": "Cross",
+            "role": "Sound designer and supervising sound engineer",
+            "stage": "Prompt engineering",
+            "does": "Builds each series’ own sonic world, where sound carries subtext and drives tension, and every hook and cliffhanger lands harder. Bold over cookie-cutter, always.",
+            "meta": [
+              {
+                "label": "Status",
+                "value": "Not yet briefed. His prompt is still being engineered."
+              }
+            ],
+            "flags": [
+              "Claude"
+            ]
+          },
+          {
+            "name": "Teo Marchetti",
+            "sortName": "Marchetti",
+            "role": "Principal front-end engineer and platform architect",
+            "stage": "Refining",
+            "does": "Develops for web and mobile using React, Vue.js, Django and other frameworks, or plain HTML, and native iOS and Android code. He builds lean, semantic code that is accessible to WCAG 2.2 AA, fast, and secure without being asked.",
+            "meta": [
+              {
+                "label": "Produced",
+                "value": "This portfolio site: a hand-built, data-driven static site with no framework and no build step, carrying every project and every agent on the bench.",
+                "href": "#/"
+              },
+              {
+                "label": "Refining",
+                "value": "Turning what this build taught into standing conventions, held in his living memory file."
+              }
+            ],
+            "flags": [
+              "Claude"
+            ]
+          },
+          {
+            "name": "Plagiarism Checker",
+            "role": "Senior editorial integrity reviewer",
+            "stage": "Refining",
+            "does": "Reviews an article before it goes out and reports any passage that reads as suspected plagiarism, so nothing published through this engine carries borrowed text.",
+            "meta": [
+              {
+                "label": "Reviewed",
+                "value": "The LinkedIn article \"Your AI Prompt Doesn’t Care That You Bolded That.\"",
+                "href": "https://www.linkedin.com/in/adina-halter-5a56183/recent-activity/articles/"
+              }
+            ],
+            "sortName": "Plagiarism Checker",
+            "flags": [
+              "Claude"
+            ]
+          },
+          {
+            "name": "Mika Renner's Atelier",
+            "role": "Senior illustrator and art director",
+            "stage": "Refining",
+            "does": "Brings fifteen years of tech-sector art direction to the imagery a project needs: brand libraries, blog heroes, documentation spots, and launch campaigns. She works in visual systems rather than one-off pictures, so a set of images holds together across a site or a campaign.",
+            "meta": [
+              {
+                "label": "Produced",
+                "value": "Article hero image for the LinkedIn article \"Your AI Prompt Doesn’t Care That You Bolded That.\"",
+                "href": "https://www.linkedin.com/in/adina-halter-5a56183/recent-activity/articles/"
+              },
+              {
+                "label": "Background",
+                "value": "Visual systems for developer-tools companies, AI labs, and fintech platforms."
+              }
+            ],
+            "sortName": "Renner",
+            "flags": [
+              "ChatGPT"
+            ]
+          },
+          {
+            "name": "Evelina Valli",
+            "role": "Casting director",
+            "stage": "In use",
+            "does": "Designs original fictional performers for a role, generates their casting headshots, and revises them when the image drifts from the written concept.",
+            "meta": [
+              {
+                "label": "Produced",
+                "value": "Both George Bailey candidates on the Wonderful page, including Daniel Reyes’ clean-shaven revision.",
+                "href": "#/project/wonderful"
+              },
+              {
+                "label": "Produced",
+                "value": "Daniel Reyes’ Kling 3.0 Elements and clip start keyframes for the George Bailey audition video."
+              },
+              {
+                "label": "In production",
+                "value": "Adrian Shaw’s Kling 3.0 Elements and clip start keyframes for the George Bailey audition video."
+              }
+            ],
+            "sortName": "Valli",
+            "flags": [
+              "ChatGPT"
+            ]
+          },
+          {
+            "name": "Morgan Vintner",
+            "role": "Senior digital accessibility auditor and engineer",
+            "stage": "Refining",
+            "does": "Audits developed UI against WCAG, engineers the corrected or alternative code, and advocates throughout for the people with disabilities who will actually use the experience. Every finding carries a severity, a confidence level, and a plain statement of what still needs a human to verify.",
+            "meta": [
+              {
+                "label": "Produced",
+                "value": "A full audit of this site: 15 findings across routing, contrast, and forced-colors support, all fixed."
+              },
+              {
+                "label": "Produced",
+                "value": "Captions and audio descriptions, created and applied to Daniel Reyes’ audition tape for deaf and hard-of-hearing and blind and low-vision viewers.",
+                "href": "#/project/wonderful"
+              },
+              {
+                "label": "Refining",
+                "value": "Increasing the share of findings that are verified rather than predicted."
+              }
+            ],
+            "flags": [
+              "Claude"
+            ],
+            "sortName": "Vintner"
+          },
+          {
+            "name": "Jean Yi",
+            "sortName": "Yi",
+            "role": "AI video director and prompt architect",
+            "stage": "In use",
+            "does": "Directs vertical short-play AI filmmaking with AI actors, writing the detailed video prompts that turn written direction into a compelling, truthful take.",
+            "meta": [
+              {
+                "label": "Produced",
+                "value": "Daniel Reyes’ AI audition video for the role of George Bailey.",
+                "href": "#/project/wonderful"
+              },
+              {
+                "label": "In production",
+                "value": "Adrian Shaw’s AI audition video for the role of George Bailey."
+              },
+              {
+                "label": "Tooling",
+                "value": "Prompting for Kling 3.0 at present; the videography tool isn’t settled."
+              }
+            ],
+            "flags": [
+              "Claude"
+            ]
           }
         ]
       }
-    ],
-    "compare": {
-      "title": "Compare the candidates",
-      "intro": "Two answers to one question: who is George Bailey now? These are the places where the two concepts differ most.",
-      "fields": [
-        {
-          "key": "vulnerability",
-          "label": "Hidden vulnerability"
-        },
-        {
-          "key": "contradiction",
-          "label": "Contradiction"
-        },
-        {
-          "key": "whyHeWorks",
-          "label": "Why he works"
-        },
-        {
-          "key": "risk",
-          "label": "Potential risk"
-        }
-      ]
     }
-  }
-]
+  ]
+}

@@ -14,6 +14,7 @@ const BLOB = REPO + "/blob/master/";
 const DATA_URL = "data/projects.json";
 
 let PROJECTS = [];
+let UPCOMING = { summary: "The next project is in development. Agent workflows and new media are on the way." };
 
 /* --------------------------- Helpers --------------------------- */
 const main = document.getElementById("main");
@@ -21,8 +22,21 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;"
 const num = i => String(i + 1).padStart(2, "0");
 /* "0–12s" is read as "0 dash 12 s" by some screen readers; give them words */
 const spokenTime = t => {
-  const m = String(t).match(/^(\d+)\s*[–-]\s*(\d+)\s*s$/);
-  return m ? `${m[1]} to ${m[2]} seconds` : t;
+  const s = String(t);
+  const secs = s.match(/^(\d+)\s*[–-]\s*(\d+)\s*s$/);
+  if (secs) return `${secs[1]} to ${secs[2]} seconds`;
+  /* "1:42–1:51" reads as punctuation; say it in words instead */
+  const clock = s.match(/^(\d+):([0-5]\d)\s*[–-]\s*(\d+):([0-5]\d)$/);
+  if (clock) {
+    const say = (m, sec) => {
+      const mm = +m, ss = +sec;
+      const mins = mm ? `${mm} minute${mm === 1 ? "" : "s"}` : "";
+      const s2 = ss || !mm ? `${ss} second${ss === 1 ? "" : "s"}` : "";
+      return [mins, s2].filter(Boolean).join(" ");
+    };
+    return `${say(clock[1], clock[2])} to ${say(clock[3], clock[4])}`;
+  }
+  return t;
 };
 let lastProjectId = null;
 let lastPerformerId = null;
@@ -89,7 +103,10 @@ function renderIndex(focusTarget) {
             <li class="entry upcoming">
               <div class="upcoming-inner">
                 <span class="entry-num" aria-hidden="true">${num(PROJECTS.length)}</span>
-                <p>The next project is in development. Agent workflows and new media are on the way.</p>
+                <div>
+                  ${UPCOMING.title ? `<h3>${esc(UPCOMING.title)}</h3>` : ""}
+                  ${UPCOMING.summary ? `<p>${esc(UPCOMING.summary)}</p>` : ""}
+                </div>
               </div>
             </li>` : ""}
         </ol>` : `<p class="empty">Nothing in this medium yet. <button class="chip" data-filter="All">Show all projects</button></p>`}
@@ -176,6 +193,7 @@ function renderProject(p) {
                     <p class="pf-objective">${esc(pf.objective)}</p>
                     ${pf.voice ? `<p class="voice">Proposed voice: ${esc(pf.voice.charAt(0).toLowerCase() + pf.voice.slice(1))}</p>` : ""}
                     ${hasConcept(pf) ? `<a class="concept-link" data-origin="cast" href="${esc(performerUrl(p, pf))}">Read ${esc(firstName(pf))}'s full concept</a>` : ""}
+                    ${renderMedia(pf)}
                     <span class="lock">Candidate, not final</span>
                   </div>
                 </div>`).join("")}
@@ -185,12 +203,13 @@ function renderProject(p) {
       </div>
 
       <div class="wrap">
+        ${renderRoster(p)}
         ${renderCompare(p)}
         ${p.tests ? `
         <section class="section" id="auditions" aria-labelledby="auditions-title">
           <div class="section-head">
             <h2 id="auditions-title">The auditions</h2>
-            <p>Both performers get the same scenes, camera, light, and timing, so the only variable is the performance. Switch between them to compare how each one is directed.</p>
+            <p>${esc(p.testsIntro || "Both performers get the same scenes, camera, light, and timing, so the only variable is the performance. Switch between them to compare how each one is directed.")}</p>
           </div>
           <div class="tests">
             ${p.tests.map((t, ti) => `
@@ -200,6 +219,7 @@ function renderProject(p) {
                   <p>${esc(t.length)}</p>
                   <p>${esc(t.setting)}</p>
                   <p><strong>What we're testing:</strong> ${esc(t.question)}</p>
+                  ${t.renderedNote ? `<p class="rendered-note">${esc(t.renderedNote)}</p>` : ""}
                 </div>
                 <div class="reading">
                   <div class="switch" role="tablist" aria-label="${esc(t.title)} readings">
@@ -209,10 +229,18 @@ function renderProject(p) {
                     <div class="panel" role="tabpanel" id="panel-${ti}-${ri}" aria-labelledby="tab-${ti}-${ri}" tabindex="0" ${ri === 0 ? "" : "hidden"}>
                       <p class="panel-label">Objective for ${esc(r.performer)}</p>
                       <p class="objective">${esc(r.objective)}</p>
+                      ${renderReel(p, r, ti, ri)}
+                      ${r.rendered ? `<h4 class="beats-head">As directed</h4>` : ""}
                       <ol class="beats" role="list">
                         ${r.beats.map(([time, text]) => `<li><span class="time"><span aria-hidden="true">${esc(time)}</span><span class="sr-only">${esc(spokenTime(time))}</span></span><span>${esc(text)}</span></li>`).join("")}
                       </ol>
                       ${r.watch ? `<p class="watch"><strong>Watch for:</strong> ${esc(r.watch)}</p>` : ""}
+                      ${r.rendered ? `
+                      <h4 class="beats-head">As rendered <span class="beats-head-note">${esc(r.rendered.duration)}</span></h4>
+                      <ol class="beats" role="list">
+                        ${r.rendered.beats.map(([time, text]) => `<li><span class="time"><span aria-hidden="true">${esc(time)}</span><span class="sr-only">${esc(spokenTime(time))}</span></span><span>${esc(text)}</span></li>`).join("")}
+                      </ol>
+                      ${r.rendered.note ? `<p class="watch"><strong>Against the direction:</strong> ${esc(r.rendered.note)}</p>` : ""}` : ""}
                     </div>`).join("")}
                 </div>
               </div>`).join("")}
@@ -297,6 +325,26 @@ function renderProject(p) {
 
   main.querySelectorAll(".concept-link").forEach(a => a.addEventListener("click", () => { lastLinkOrigin = a.dataset.origin; }));
 
+  main.querySelectorAll("[data-reel]").forEach(a => a.addEventListener("click", e => {
+    const video = document.getElementById(a.dataset.reel);
+    if (!video || !video.dataset.described) return;
+    e.preventDefault();
+    const toDescribed = a.dataset.version === "described";
+    const wasPlaying = !video.paused;
+    const at = video.currentTime;
+    video.querySelector("source").src = toDescribed ? video.dataset.described : video.dataset.standard;
+    video.load();
+    video.addEventListener("loadedmetadata", () => {
+      video.currentTime = at;
+      if (wasPlaying) video.play().catch(() => {});
+    }, { once: true });
+    a.href = toDescribed ? video.dataset.standard : video.dataset.described;
+    a.dataset.version = toDescribed ? "standard" : "described";
+    a.textContent = toDescribed ? video.dataset.standardLabel : video.dataset.describedLabel;
+    const status = document.getElementById(a.dataset.reel + "-status");
+    if (status) status.textContent = toDescribed ? "Audio-described version loaded." : "Standard version loaded.";
+  }));
+
   main.querySelectorAll("[data-lightbox]").forEach(b => b.addEventListener("click", () => openLightbox(p.performers[+b.dataset.lightbox], b)));
 
   document.title = `${p.title} — Adina Halter`;
@@ -311,6 +359,87 @@ function renderProject(p) {
     window.scrollTo(0, 0);
     document.getElementById("project-title").focus({ preventScroll: true });
   }
+}
+
+/* --------------------- Performer audition media ---------------- */
+/* The rendered tape, captioned, with a link to the audio-described cut.
+   Without JS that link opens the described file; with JS it swaps the
+   source in place, so either version keeps the same caption track. */
+function renderReel(p, reading, ti, ri) {
+  const pf = (p.performers || []).find(x => x.name === reading.performer);
+  const m = pf && pf.media && pf.media.audition;
+  if (!m || !reading.rendered || !m.standard) return "";
+  const id = `reel-${ti}-${ri}`;
+  const described = m.describedLabel || "Watch the audio-described version";
+  return `
+                      <figure class="reel">
+                        <h4 class="sr-only" id="${id}-label">${esc(pf.name)}: ${esc(m.scene || "audition")}, rendered tape</h4>
+                        <video id="${id}" controls preload="metadata" playsinline aria-labelledby="${id}-label"
+                               data-standard="${esc(m.standard)}" data-described="${esc(m.described || "")}"
+                               data-standard-label="${esc(m.standardLabel || "Switch back to the standard version")}"
+                               data-described-label="${esc(described)}">
+                          <source src="${esc(m.standard)}" type="video/mp4">
+                          ${m.captions ? `<track kind="captions" src="${esc(m.captions)}" srclang="en" label="English captions">` : ""}
+                        </video>
+                        <figcaption>
+                          <p class="reel-meta">${esc(m.duration || "")}${m.madeWith ? ` · Made with ${esc(m.madeWith)}` : ""}${m.captions ? " · Captions available in the player" : ""}</p>
+                          <p class="reel-links">
+                            ${m.described ? `<a href="${esc(m.described)}" data-reel="${id}" data-version="described">${esc(described)}</a>` : ""}
+                            ${m.transcript ? `<a href="${esc(m.transcript)}">${esc(m.transcriptLabel || "Read the descriptive transcript")}</a>` : ""}
+                          </p>
+                          <p class="sr-only" aria-live="polite" id="${id}-status"></p>
+                        </figcaption>
+                      </figure>`;
+}
+
+function mediaCell(pf) {
+  const m = pf.media || {};
+  if (m.audition) {
+    return `<a href="#auditions" data-scroll>${esc(m.audition.label)}</a>` +
+      (m.audition.madeWith ? `<span class="made-with made-with-light">Made with ${esc(m.audition.madeWith)}</span>` : "");
+  }
+  return m.status ? `<span class="audition-pending-light">${esc(m.status)}</span>` : "";
+}
+
+function renderMedia(pf) {
+  const m = pf.media;
+  if (!m) return "";
+  if (m.audition) {
+    return `<p class="audition-link"><a href="#auditions" data-scroll>${esc(m.audition.label)}</a>` +
+      (m.audition.madeWith ? ` <span class="made-with">Made with ${esc(m.audition.madeWith)}</span>` : "") + `</p>`;
+  }
+  return m.status ? `<p class="audition-pending">${esc(m.status)}</p>` : "";
+}
+
+/* --------------------------- Agent roster ---------------------- */
+function renderRoster(p) {
+  const r = p.roster;
+  if (!r || !(r.agents || []).length) return "";
+  return `
+        <section class="section roster-section" aria-labelledby="roster-title">
+          <div class="section-head">
+            <h2 id="roster-title">${esc(r.title)}</h2>
+            ${r.intro ? `<p>${esc(r.intro)}</p>` : ""}
+          </div>
+          <ul class="roster" role="list">
+            ${r.agents.map(a => `
+            <li class="agent">
+              <div class="agent-head">
+                <h3>${esc(a.name)}</h3>
+                <span class="stage stage-${esc(a.stage.toLowerCase().replace(/\s+/g, "-"))}">${esc(a.stage)}</span>
+              </div>
+              <p class="agent-role">${esc(a.role)}</p>
+              <p class="agent-does">${esc(a.does)}</p>
+              ${(a.meta || []).length ? `
+              <dl class="agent-meta">
+                ${a.meta.map(m => `<div><dt>${esc(m.label)}</dt><dd>${m.href ? `<a href="${esc(m.href)}">${esc(m.value)}</a>` : esc(m.value)}</dd></div>`).join("")}
+              </dl>` : ""}
+              ${(a.flags || []).length ? `
+              <p class="agent-flags"><span class="sr-only">Runs on: </span>${a.flags.map(f => `<span class="flag">${esc(f)}</span>`).join("")}</p>` : ""}
+            </li>`).join("")}
+          </ul>
+          ${r.note ? `<p class="note"><strong>Why there's nothing to browse:</strong> ${esc(r.note)}</p>` : ""}
+        </section>`;
 }
 
 /* ----------------------- Candidate comparison ------------------ */
@@ -341,7 +470,7 @@ function renderCompare(p) {
               ${c.fields.map(f => `
               <tr role="row">
                 <th scope="row" role="rowheader">${esc(f.label)}</th>
-                ${cast.map(pf => `<td role="cell">${esc(pf.concept[f.key] || "")}</td>`).join("")}
+                ${cast.map(pf => `<td role="cell">${f.type === "media" ? mediaCell(pf) : esc(pf.concept[f.key] || "")}</td>`).join("")}
               </tr>`).join("")}
             </tbody>
           </table>
@@ -461,7 +590,13 @@ async function init() {
   try {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    PROJECTS = await res.json();
+    const data = await res.json();
+    /* The file is either a plain array of projects, or an object with a
+       projects array plus page-level copy such as the "up next" line. */
+    PROJECTS = Array.isArray(data) ? data : (data.projects || []);
+    if (!Array.isArray(data) && data.upcoming) {
+      UPCOMING = typeof data.upcoming === "string" ? { summary: data.upcoming } : data.upcoming;
+    }
   } catch (err) {
     console.error("Could not load project data:", err);
     main.innerHTML = `
