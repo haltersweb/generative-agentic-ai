@@ -9,7 +9,6 @@
 
 /* ---------------------------- Config --------------------------- */
 const REPO = "https://github.com/haltersweb/generative-agentic-ai";
-const RAW = "https://raw.githubusercontent.com/haltersweb/generative-agentic-ai/master/";
 const BLOB = REPO + "/blob/master/";
 const DATA_URL = "data/projects.json";
 
@@ -46,18 +45,21 @@ const performerUrl = (p, pf) => `#/project/${p.id}/${pf.id}`;
 const hasConcept = pf => pf.id && pf.concept;
 let activeFilter = "All";
 
-/* Images load from the repo when hosted on GitHub Pages, fall back to
-   raw.githubusercontent.com when opened locally, then to initials. */
+/* Headshots load from the site itself (paths in the JSON are relative to
+   the site root). If one fails, the performer's initials stand in. Error
+   events don't bubble, so one capturing listener covers every headshot,
+   with no inline handler to trip a Content Security Policy. */
 function photo(p, cls = "") {
   return `<img class="${cls}" src="${esc(p.image)}" alt="${esc(p.alt || `Casting headshot of ${p.name}, an AI-generated fictional performer`)}" loading="lazy" decoding="async"
-    data-raw="${esc(RAW + p.image)}" data-initials="${esc(p.initials)}" onerror="imgFallback(this)">`;
+    data-initials="${esc(p.initials)}">`;
 }
-function imgFallback(img) {
-  if (img.dataset.raw && img.src !== img.dataset.raw) { img.src = img.dataset.raw; img.dataset.raw = ""; return; }
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || !("initials" in img.dataset)) return;
   const d = document.createElement("div");
-  d.className = "initials"; d.setAttribute("aria-hidden", "true"); d.textContent = img.dataset.initials || "";
+  d.className = "initials"; d.setAttribute("aria-hidden", "true"); d.textContent = img.dataset.initials;
   img.replaceWith(d);
-}
+}, true);
 
 /* ------------------------- Index view -------------------------- */
 function renderIndex(focusTarget) {
@@ -325,6 +327,17 @@ function renderProject(p) {
 
   main.querySelectorAll(".concept-link").forEach(a => a.addEventListener("click", () => { lastLinkOrigin = a.dataset.origin; }));
 
+  /* The described-version switch stays an <a> with a real href, so its
+     context menu can still open or save the file. Activating it swaps the
+     source in place, so it is exposed as a button and answers Space, which
+     links do not. */
+  main.querySelectorAll("[data-reel]").forEach(a => {
+    a.setAttribute("role", "button");
+    a.addEventListener("keydown", e => {
+      if (e.key === " ") { e.preventDefault(); a.click(); }
+    });
+  });
+
   main.querySelectorAll("[data-reel]").forEach(a => a.addEventListener("click", e => {
     const video = document.getElementById(a.dataset.reel);
     if (!video || !video.dataset.described) return;
@@ -343,6 +356,9 @@ function renderProject(p) {
     a.textContent = toDescribed ? video.dataset.standardLabel : video.dataset.describedLabel;
     const status = document.getElementById(a.dataset.reel + "-status");
     if (status) status.textContent = toDescribed ? "Audio-described version loaded." : "Standard version loaded.";
+    /* The player's name says which version it holds, for whoever returns to it later */
+    const label = document.getElementById(a.dataset.reel + "-label");
+    if (label) label.textContent = toDescribed ? `${label.dataset.base}, audio-described version` : label.dataset.base;
   }));
 
   main.querySelectorAll("[data-lightbox]").forEach(b => b.addEventListener("click", () => openLightbox(p.performers[+b.dataset.lightbox], b)));
@@ -373,13 +389,13 @@ function renderReel(p, reading, ti, ri) {
   const described = m.describedLabel || "Watch the audio-described version";
   return `
                       <figure class="reel">
-                        <h4 class="sr-only" id="${id}-label">${esc(pf.name)}: ${esc(m.scene || "audition")}, rendered tape</h4>
+                        <h4 class="sr-only" id="${id}-label" data-base="${esc(pf.name)}: ${esc(m.scene || "audition")}, rendered tape">${esc(pf.name)}: ${esc(m.scene || "audition")}, rendered tape</h4>
                         <video id="${id}" controls preload="metadata" playsinline aria-labelledby="${id}-label"
                                data-standard="${esc(m.standard)}" data-described="${esc(m.described || "")}"
                                data-standard-label="${esc(m.standardLabel || "Switch back to the standard version")}"
                                data-described-label="${esc(described)}">
                           <source src="${esc(m.standard)}" type="video/mp4">
-                          ${m.captions ? `<track kind="captions" src="${esc(m.captions)}" srclang="en" label="English captions">` : ""}
+                          ${m.captions ? `<track kind="captions" src="${esc(m.captions)}" srclang="en" label="English captions" default>` : ""}
                         </video>
                         <figcaption>
                           <p class="reel-meta">${esc(m.duration || "")}${m.madeWith ? ` · Made with ${esc(m.madeWith)}` : ""}${m.captions ? " · Captions available in the player" : ""}</p>
@@ -387,8 +403,8 @@ function renderReel(p, reading, ti, ri) {
                             ${m.described ? `<a href="${esc(m.described)}" data-reel="${id}" data-version="described">${esc(described)}</a>` : ""}
                             ${m.transcript ? `<a href="${esc(m.transcript)}">${esc(m.transcriptLabel || "Read the descriptive transcript")}</a>` : ""}
                           </p>
-                          <p class="sr-only" aria-live="polite" id="${id}-status"></p>
                         </figcaption>
+                        <p class="sr-only" aria-live="polite" id="${id}-status"></p>
                       </figure>`;
 }
 

@@ -8,4 +8,8 @@ Audition packet: change "UNLOCKED" to sentence case when you next edit the Markd
 
 PDFs: run both through a PDF/UA checker such as PAC before sharing them outside your team.
 
-Hosting: confirm where the page is hosted. I'll write a short follow-up to CL-003.
+Check the snow line at 0:47 (P-02): If it’s wrong, the narration in the described video may need re-recording.
+
+Validate the PDF: Run it through veraPDF or PAC. Once that’s clean and someone has done a quick screen reader read-through, I’ll write the conformance statement.
+
+Screen reader testing: The video controls and the version switch still need checking with VoiceOver and NVDA. If you or your developer do that testing, tell me what you hear and I’ll record it in the ledger.
